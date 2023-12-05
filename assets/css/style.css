@@ -1,0 +1,252 @@
+/* Constant styles  */
+@font-face {
+  font-family: heregular;
+  src: url("../fonts/Helvetica Neue Regular.otf");
+}
+@font-face {
+  font-family: hemedium;
+  src: url("../fonts/HelveticaNeueMedium.ttf");
+}
+@font-face {
+  font-family: hebold;
+  src: url("../fonts/HelveticaNeueBold.ttf");
+}
+@font-face {
+  font-family: heblack;
+  src: url("../fonts/HelveticaNeueBold.ttf");
+}
+@font-face {
+  font-family: helight;
+  src: url("../fonts/HelveticaNeueLight.ttf");
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  transition: all 0.4s ease-in;
+  font-family: heregular;
+}
+
+body {
+  font-family: heregular;
+  line-height: normal !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0 !important;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button {
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* // Constant Styles */
+ul {
+  margin-bottom: 0;
+}
+
+.form-control {
+  border-radius: 7px;
+  background-color: rgba(245, 247, 250, 0.386);
+}
+.form-control:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+p {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+/* Main Style */
+.btn_style {
+  display: inline-flex;
+  height: 50px;
+  padding: 15px 42px;
+  justify-content: center;
+  align-items: center;
+  background-color: #082eb5;
+  border: 1px solid #082eb5;
+  border-radius: 11px;
+  color: #fff;
+}
+.btn_style:hover {
+  color: #082eb5;
+  background-color: #fff;
+}
+
+.card_img {
+  height: 100vh;
+  position: relative;
+}
+.card_img .img_parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card_img .img_parent img,
+.card_img .img_parent video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.section_header {
+  margin: 20px 0;
+}
+.section_header h5 {
+  font-size: 2rem;
+}
+
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+body.modal-open .mm-slideout {
+  z-index: auto;
+}
+
+.pd-100 {
+  padding: 0 300px;
+}
+
+@media (max-width: 1920px) {
+  .pd-100 {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1440px) {
+  .pd-100 {
+    padding: 0 70px;
+  }
+}
+@media (max-width: 1024px) {
+  .pd-100 {
+    padding: 0 50px;
+  }
+}
+.splashoverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splashoverlay {
+  z-index: 999;
+  background-color: #252525;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#counter {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 5rem;
+}
+
+.splashoverlay .overlay-loader img {
+  width: 120px;
+}
+
+/* ================================================================ */
+.custom_navbar {
+  background: #fff;
+  box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.07);
+  padding: 24px 0;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+}
+.custom_navbar .navbar_logo img {
+  width: 165px;
+}
+.custom_navbar .navbar_links .nav_item {
+  margin-left: 35px;
+}
+.custom_navbar .navbar_links .nav_item .nav_link {
+  color: #000;
+  font-family: helight;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.custom_navbar .navbar_links .nav_item .nav_link i {
+  font-size: 0.8rem;
+  margin-left: 7px;
+  margin-top: 2px;
+}
+.custom_navbar .navbar_links .nice-select {
+  float: none;
+  border: 0;
+  font-family: helight;
+  padding-left: 0;
+}
+
+/* ================================================================ */
+.home_header .card_img {
+  height: 100vh;
+}
+
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* ================================================================ */
+/* Shared styles  *//*# sourceMappingURL=style.css.map */
