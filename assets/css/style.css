@@ -203,6 +203,7 @@ body.modal-open .mm-slideout {
 }
 .custom_navbar .navbar_logo img {
   width: 165px;
+  transition: all 0.3s ease-in-out;
 }
 .custom_navbar .navbar_links .nav_item {
   margin-left: 55px;
@@ -226,6 +227,10 @@ body.modal-open .mm-slideout {
   padding-left: 0;
 }
 
+.fixed_navbar .navbar_logo img {
+  width: 90px !important;
+}
+
 /* ================================================================ */
 .home_header .card_img {
   height: 100vh;
@@ -245,7 +250,7 @@ body.modal-open .mm-slideout {
   right: 0;
 }
 .our_legacy .our_legacy_wrapper .card_title {
-  color: #1B1B1B;
+  color: #1b1b1b;
   font-family: hemedium;
   font-size: 2rem;
   text-transform: uppercase;
@@ -271,7 +276,7 @@ body.modal-open .mm-slideout {
   width: fit-content;
 }
 .our_legacy .our_legacy_wrapper .card_link a {
-  color: #2E55A4;
+  color: #2e55a4;
   font-size: 1.1rem;
   font-style: normal;
   font-family: hemedium;
@@ -284,7 +289,7 @@ body.modal-open .mm-slideout {
   width: 100%;
   height: 1px;
   left: 0;
-  background: #2E55A4;
+  background: #2e55a4;
 }
 
 .fact_numbers {
@@ -305,13 +310,13 @@ body.modal-open .mm-slideout {
 }
 .fact_number_card .number h5 {
   font-family: hebold;
-  color: #1B1B1B;
+  color: #1b1b1b;
   font-size: 2.3rem;
   margin: 0;
 }
 .fact_number_card .number span {
   margin: 0;
-  color: #1B1B1B;
+  color: #1b1b1b;
   font-size: 1.2rem;
 }
 .fact_number_card .text p {
@@ -328,7 +333,7 @@ body.modal-open .mm-slideout {
   right: 0;
   height: 80%;
   transform: translate(0, -50%);
-  background-color: #F1F2F2;
+  background-color: #f1f2f2;
   width: 2px;
   right: 0;
 }
@@ -341,7 +346,7 @@ body.modal-open .mm-slideout {
   text-align: center;
 }
 .our_development .section_header h5 {
-  color: #1B1B1B;
+  color: #1b1b1b;
   font-size: 2.5rem;
   letter-spacing: 1.6px;
   text-transform: uppercase;
@@ -415,7 +420,7 @@ body.modal-open .mm-slideout {
 }
 
 .project_card {
-  background: #F1F2F2;
+  background: #f1f2f2;
   padding: 65px 0 65px 40px;
   margin: 0 20px;
 }
@@ -434,7 +439,7 @@ body.modal-open .mm-slideout {
   margin-top: 110px;
 }
 .project_card .project_text p {
-  color: #1B1B1B;
+  color: #1b1b1b;
   font-size: 0.9rem;
   font-style: normal;
   line-height: 142.857%;
@@ -442,7 +447,7 @@ body.modal-open .mm-slideout {
   text-transform: capitalize;
 }
 .project_card .project_link a {
-  background: #2E55A4;
+  background: #2e55a4;
   padding: 20px 50px;
   color: #fff;
   font-size: 1rem;
@@ -455,7 +460,7 @@ body.modal-open .mm-slideout {
   margin-bottom: 90px;
 }
 .avilible_projects .section_header {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 .avilible_projects .section_header h5 {
   font-size: 1.8rem;
@@ -469,23 +474,59 @@ body.modal-open .mm-slideout {
 }
 .avilible_projects .slick-list {
   margin: 0 -20px;
+  padding-top: 50px !important;
 }
 .avilible_projects .slider_item {
   opacity: 0.5;
+  transition: all 0.3s ease-in-out;
 }
 .avilible_projects .slider_item.slick-active {
   opacity: 1;
 }
+.avilible_projects .slider_item.slick-current {
+  transform: translateY(-50px);
+}
 .avilible_projects .slider_item.slick-current .card_img {
   height: 600px;
 }
+.avilible_projects .slick-next {
+  right: 300px;
+}
+.avilible_projects .slick-prev {
+  right: 340px;
+}
 
+@media (max-width: 1920px) {
+  .avilible_projects .slick-next {
+    right: 100px;
+  }
+  .avilible_projects .slick-prev {
+    right: 140px;
+  }
+}
+@media (max-width: 1440px) {
+  .avilible_projects .slick-next {
+    right: 70px;
+  }
+  .avilible_projects .slick-prev {
+    right: 110px;
+  }
+}
+@media (max-width: 1024px) {
+  .avilible_projects .slick-next {
+    right: 50px;
+  }
+  .avilible_projects .slick-prev {
+    right: 90px;
+  }
+}
 .avilible_projects_card {
   margin: 0 20px;
 }
 .avilible_projects_card .card_img {
-  height: 547px;
+  height: 550px;
   margin-bottom: 32px;
+  transition: all 0.3s ease-in-out;
 }
 .avilible_projects_card .card_body .logo h6 {
   color: rgba(27, 27, 27, 0.7);
@@ -510,9 +551,10 @@ body.modal-open .mm-slideout {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
 }
 .avilible_projects_card .card_body .card_link span {
-  color: #2E55A4;
+  color: #2e55a4;
   font-size: 0.8rem;
   margin-right: 8px;
 }
@@ -523,7 +565,100 @@ body.modal-open .mm-slideout {
   width: 100%;
   height: 1px;
   left: 0;
-  background: #2E55A4;
+  background: #2e55a4;
+}
+
+.footer {
+  background: #1b1b1b;
+  padding: 65px 0 45px 0;
+}
+.footer .footer_top_world {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+}
+.footer .footer_top_world h5 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+.footer .footer_top_world h5 span {
+  font-family: hebold;
+}
+.footer .footer_top_world p {
+  color: #fff;
+  font-size: 1rem;
+  font-family: helight;
+  font-style: normal;
+  line-height: 166.667%;
+  text-transform: uppercase;
+}
+.footer .footer_top_world p span {
+  font-family: hebold;
+}
+.footer .footer_links {
+  margin-top: 80px;
+}
+.footer .footer_links .links {
+  padding: 0 70px 0 35px;
+  position: relative;
+  min-height: 300px;
+}
+.footer .footer_links .links::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 90%;
+  width: 3px;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0.1;
+  background: #fff;
+}
+.footer .footer_links .links h5 {
+  color: #fff;
+  font-size: 1rem;
+  font-family: hebold;
+  line-height: 166.667%;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.footer .footer_links .links a {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-family: helight;
+  line-height: 187.5%;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+.footer .footer_contact {
+  margin-top: 65px;
+}
+.footer .footer_contact .contact a {
+  display: flex;
+  align-items: center;
+}
+.footer .footer_contact .contact span {
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: hebold;
+  margin-left: 10px;
+}
+.footer .social li {
+  margin: 0 10px;
+}
+.footer .social i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.last_links::after {
+  display: none !important;
 }
 
 /* ================================================================ */
