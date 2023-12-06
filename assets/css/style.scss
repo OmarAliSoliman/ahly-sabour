@@ -188,6 +188,11 @@ body.modal-open .mm-slideout {
     padding: 0 50px;
   }
 }
+@media (max-width: 600px) {
+  .pd-100 {
+    padding: 0 20px;
+  }
+}
 
 // ================================================================
 
@@ -276,8 +281,9 @@ body.modal-open .mm-slideout {
 
 /* ================================================================ */
 .home_header {
+  margin-top: 120px;
   .card_img {
-    height: 100vh;
+    height: calc(100vh -  120px)
   }
 }
 
@@ -293,6 +299,7 @@ body.modal-open .mm-slideout {
       position: absolute;
       top: 0;
       right: 0;
+      z-index: -1;
     }
 
     .card_title {
@@ -330,6 +337,9 @@ body.modal-open .mm-slideout {
         font-style: normal;
         font-family: $hemedium;
         line-height: 36px;
+        img{
+          margin-left: 10px;
+        }
       }
 
       &::after {
@@ -369,7 +379,7 @@ body.modal-open .mm-slideout {
       margin: 0;
     }
 
-    span {
+    .smallspan {
       margin: 0;
       color: #1b1b1b;
       font-size: 1.2rem;
@@ -421,12 +431,15 @@ body.modal-open .mm-slideout {
   .our_development_tabs {
     .nav {
       justify-content: center;
-
+      overflow: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 10px;
       .nav-item {
         // padding: 0 10px;
 
         .nav-link {
           color: rgba(#1b1b1b, 0.4);
+          min-width: max-content;
           font-size: 18px;
           font-style: normal;
           font-family: $helight;
@@ -559,7 +572,7 @@ body.modal-open .mm-slideout {
 
 .avilible_projects {
   margin-bottom: 90px;
-
+  overflow: hidden;
   .section_header {
     margin-bottom: 30px;
 
@@ -755,7 +768,7 @@ body.modal-open .mm-slideout {
   .footer_contact {
     margin-top: 65px;
     .contact {
-      a{
+      a {
         display: flex;
         align-items: center;
       }
@@ -768,11 +781,11 @@ body.modal-open .mm-slideout {
       }
     }
   }
-  .social{
-    li{
+  .social {
+    li {
       margin: 0 10px;
     }
-    i{
+    i {
       color: #fff;
       font-size: 1.5rem;
     }
@@ -792,7 +805,92 @@ body.modal-open .mm-slideout {
   }
 }
 
+@media (max-width: 1300px) {
+  .custom_navbar .navbar_links .nav_item {
+    margin-left: 20px;
+  }
+  .custom_navbar .navbar_logo img {
+    width: 140px;
+  }
+  .our_legacy .our_legacy_wrapper {
+    padding-bottom: 90px;
+  }
+  .fact_number_card {
+    padding: 27px 35px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .custom_navbar {
+    .navbar_links {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .project_card .project_card_img .card_img {
+    height: 370px;
+  }
+  .project_card .project_text {
+    margin-top: 50px;
+  }
+  .footer .footer_links .links {
+    padding: 0 0 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .our_legacy .our_legacy_wrapper {
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .our_legacy .our_legacy_wrapper .card_text {
+    margin-bottom: 30px;
+  }
+  .arrow_style .slick-next {
+    bottom: -60px;
+    right: 10px;
+    top: unset;
+  }
+  .arrow_style .slick-prev {
+    top: unset;
+    bottom: -60px;
+    left: 10px;
+  }
+  .project_card,
+  .our_development .projects_cards_slider .slick-list {
+    margin: 0 0;
+  }
+  .project_card .project_card_img .card_img{
+    margin-top: 40px;
+  }
+  .footer .footer_top_world{
+    margin-top: 40px;
+  }
+  .footer .social ul{
+    justify-content: center !important;
+    margin-top: 30px;
+  }
+  .footer .footer_logo{
+    text-align: center;
+  }
+  .avilible_projects{
+    .slick-arrow{
+      bottom: 0;
+    }
+    .slick-next{
+      right: 30px;
+    }
+    .slick-prev{
+      left: 30px;
+    }
+  }
+}
+
 /* ================================================================ */
+
 /* ================================================================ */
 /* ================================================================ */
 /* ================================================================ */

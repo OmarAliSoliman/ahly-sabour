@@ -99,7 +99,8 @@
   <div class="home_header">
     <div class="card_img">
       <div class="img_parent">
-        <img src="./assets/images/header.png" alt="">
+        <!-- <img src="./assets/images/header.png" alt=""> -->
+        <video src="./assets/videos/video.mp4" muted autoplay loop playsinline></video>
       </div>
     </div>
   </div>
@@ -108,20 +109,20 @@
   <div class="our_legacy">
     <div class="container-fluid pd-100">
       <div class="our_legacy_wrapper">
-        <div class="our_legacy_img">
+        <div class="our_legacy_img" data-aos="fade-down">
           <img src="./assets/images/ourlegacy.png" alt="">
         </div>
         <div class="card_title">
           <h5>Our <span>Legacy</span></h5>
         </div>
-        <div class="card_text col-lg-4">
-          <p>
+        <div class="card_text col-md-12 col-lg-6 col-xl-4">
+          <p data-aos="fade-up">
             Back in 1994, Eng. Hussein Sabbour had a vision. His aspirational vision was to establish one of the first
             engineering consultancy firms in Egypt, and to build it into the most empowering and prominent real estate
             businesses....
           </p>
         </div>
-        <div class="card_link">
+        <div class="card_link" data-aos="fade-up">
           <a href="">
             <span>more about the company</span>
             <img src="./assets/images/line.svg" alt="">
@@ -139,8 +140,8 @@
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="fact_number_card">
               <div class="number">
-                <h5>29</h5>
-                <span>years</span>
+                <h5 class="counter">29</h5>
+                <span class="smallspan">years</span>
               </div>
               <div class="text">
                 <p>
@@ -154,8 +155,8 @@
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="fact_number_card">
               <div class="number">
-                <h5>12M+</h5>
-                <span>Sqm</span>
+                <h5><span class="counter">12</span>M+</h5>
+                <span class="smallspan">Sqm</span>
               </div>
               <div class="text">
                 <p>
@@ -169,7 +170,7 @@
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="fact_number_card">
               <div class="number">
-                <h5>60+</h5>
+                <h5><span class="counter">60</span>+</h5>
               </div>
               <div class="text">
                 <p>
@@ -183,7 +184,7 @@
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="fact_number_card">
               <div class="number">
-                <h5>30,000+</h5>
+                <h5> <span class="counter">30,000</span>+</h5>
               </div>
               <div class="text">
                 <p>
@@ -202,14 +203,14 @@
 
   <div class="our_development">
     <div class="container-fluid pd-100">
-      <div class="section_header">
+      <div class="section_header" data-aos="fade-down">
         <h5>
           our <span>Developments</span>
         </h5>
       </div>
 
 
-      <div class="our_development_tabs">
+      <div class="our_development_tabs" data-aos="fade-up">
         <ul class="nav nav-pills" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="pills-development1-tab" data-bs-toggle="pill"
@@ -504,7 +505,7 @@
   </div>
 
 
-  <div class="avilible_projects">
+  <div class="avilible_projects" data-aos="fade-up">
     <div class="container-fluid pd-100">
       <div class="section_header">
         <h5>
@@ -523,11 +524,11 @@
               </div>
             </div>
             <div class="card_body">
-              <div class="logo">
+              <div class="logo" data-aos="fade-up">
                 <img src="./assets/images/av1logo.svg" alt="">
                 <h6>Centrally located in west Cairo</h6>
               </div>
-              <div class="card_text">
+              <div class="card_text" data-aos="fade-up">
                 <p>
                   A Vibrant Community centrally located in west Cairo, where the heart of an Irish name becomes a
                   reality, and
@@ -535,7 +536,7 @@
                 </p>
               </div>
               <div class="card_link">
-                <a href="" class="card_link">
+                <a href="" class="card_link" data-aos="fade-down">
                   <span>discover more</span>
                   <img src="./assets/images/line2.svg" alt="">
                 </a>
@@ -716,10 +717,10 @@
 
       <div class="footer_links">
         <div class="row">
-          <div class="col-sm-12 col-md-7 col-lg-7 mx-auto">
+          <div class="col-sm-12 col-md-12 col-lg-9 col-xl-7 mx-auto">
             <div class="footer_links_wrapper">
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-6 col-md-4 col-lg-4">
                   <div class="links">
                     <h5>Our Development </h5>
                     <ul class="list-unstyled">
@@ -731,7 +732,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-6 col-md-4 col-lg-4">
                   <div class="links">
                     <h5>AL AHLY SABBOUR</h5>
                     <ul class="list-unstyled">
@@ -743,7 +744,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-6 col-md-4 col-lg-4">
                   <div class="links last_links">
                     <h5>Support</h5>
                     <ul class="list-unstyled">
@@ -790,6 +791,7 @@
 
 
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/jquery.nice-select.min.js"></script>
@@ -810,6 +812,8 @@
 
   <!-- for animation -->
   <script src="./assets/js/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
 
   <script src="./assets/js/main.js"></script>
 </body>

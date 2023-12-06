@@ -28,13 +28,13 @@ $(document).ready(function () {
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 1.1,
           },
         },
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 2.2,
+            slidesToShow: 1.1,
             centerMode: false,
           },
         },
@@ -78,14 +78,29 @@ $(document).ready(function () {
           breakpoint: 1450,
           settings: {
             slidesToShow: 3.3,
-            centerMode: false,
+            // centerMode: false,
           },
         },
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 2.7,
+            // centerMode: false,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1.7,
+            // centerMode: false,
+          },
+        },
+
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 1,
-            centerMode: false,
+            // centerMode: false,
           },
         },
       ],
@@ -105,6 +120,16 @@ $(document).ready(function () {
       $(".custom_navbar").removeClass('fixed_navbar');
     }
   })
+
+  if($(".counter").length){
+    $(".counter").counterUp({
+      time: 1500,
+    });
+  }
+
+  const navbarTimeLine  = gsap.timeline();
+  navbarTimeLine.from(".custom_navbar .navbar_logo", {opacity: 0, stagger: .2, x:-4 ,ease: "powerIn.Out"})
+  .from(".custom_navbar .navbar_links li", {opacity: 0, stagger: .2, x:-4 ,ease: "powerIn.Out"})
 
   AOS.init();
 });
