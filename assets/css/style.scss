@@ -906,6 +906,29 @@ body.modal-open .mm-slideout { z-index:auto;}
         line-height: 187.5%;
         margin-bottom: 14px;
         display: inline-block;
+        position: relative;
+        padding-bottom: 5px;
+        &::after{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 80%;
+          margin: auto;
+          left: 50%;
+          height: 1px;
+          background-color: #fff;
+          content: "";
+          opacity: .8;
+          transform: translate(-50%, 0);
+          width: 0;
+          transition: all .3s ease-in-out;
+        }
+        &:hover {
+          cursor: pointer;
+          &::after{
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -1016,6 +1039,13 @@ body.modal-open .mm-slideout { z-index:auto;}
   }
   .footer .footer_top_world {
     margin-top: 40px;
+    text-align: center;
+    h5{
+      font-size: 1.3rem;
+    }
+    p{
+      font-size: .9rem;
+    }
   }
   .footer .social ul {
     justify-content: center !important;
@@ -1047,6 +1077,10 @@ body.modal-open .mm-slideout { z-index:auto;}
   }
   .footer .social ul{
     margin-top: 0;
+  }
+  .fact_number_card{
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
   }
 }
 
