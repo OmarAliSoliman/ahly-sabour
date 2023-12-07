@@ -129,27 +129,27 @@ $(document).ready(function () {
 
   const navbarTimeLine  = gsap.timeline();
   navbarTimeLine.from(".custom_navbar .navbar_logo", {opacity: 0, stagger: .2, x:-4 ,ease: "powerIn.Out"})
-  .from(".custom_navbar .navbar_links li", {opacity: 0, stagger: .2, x:-4 ,ease: "powerIn.Out"})
+  .from(".custom_navbar .navbar_links > ul > li", {opacity: 0, stagger: .2, x:-4 ,ease: "powerIn.Out"})
 
   AOS.init();
 });
 
 
 $(window).on("load", function () {
-  // var currentDir = $("body").css("direction");
+  var currentDir = $("body").css("direction");
   // setTimeout(() => {
   //   animateOut();
   // }, 2000);
-  // new Mmenu("#menu", {
-  //   offCanvas: {
-  //     slidingSubmenus: false,
-  //     position: currentDir == "rtl" ? "left-front" : "right-front"
-  //   },
-  //   theme: "light",
-  //   counters: {
-  //     add: true,
-  //   },
-  // });
+  new Mmenu("#menu", {
+    offCanvas: {
+      slidingSubmenus: false,
+      position: currentDir == "rtl" ? "left-front" : "right-front"
+    },
+    theme: "light",
+    counters: {
+      add: true,
+    },
+  });
 });
 
 $(window).on("load", function () {
