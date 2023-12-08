@@ -17,7 +17,7 @@ $(document).ready(function () {
       speed: 300,
       infinite: false,
       autoplaySpeed: 5000,
-      autoplay: true,
+      autoplay: false,
       responsive: [
         {
           breakpoint: 1300,
@@ -108,8 +108,61 @@ $(document).ready(function () {
   }
 
 
+  if ($(".brains_slider").length) {
+    $(".brains_slider").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      speed: 300,
+      infinite: true,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1450,
+          settings: {
+            slidesToShow: 3,
+            // centerMode: false,
+          },
+        },
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 1.6,
+            // centerMode: false,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1.6,
+            // centerMode: false,
+          },
+        },
+
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            // centerMode: false,
+          },
+        },
+      ],
+    })
+  }
+
+  if($(".project_img_slider").length){
+    $(".project_img_slider").slick({
+      dots: true,
+      arrows: true,
+    })
+  }
+
   $(".nav-pills .nav-item .nav-link").on('shown.bs.tab', function () {
     $('.projects_cards_slider').slick('setPosition');
+    $(".project_img_slider").slick('setPosition');
     AOS.refresh();
   });
 
