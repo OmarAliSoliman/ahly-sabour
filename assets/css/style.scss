@@ -910,6 +910,11 @@ body.modal-open .mm-slideout {
   }
 }
 
+.custom_breadcrumb_flexend {
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+
 .ceo_messages {
   margin-top: 80px;
   .section_header {
@@ -1093,15 +1098,15 @@ body.modal-open .mm-slideout {
         font-size: 1rem;
         margin-left: 10px;
         font-family: $helight;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
-      img{
+      img {
         width: 20px;
       }
-      &:hover{
+      &:hover {
         background-color: #2e55a4;
         border-color: #2e55a4;
-        span{
+        span {
           color: #fff;
         }
       }
@@ -1127,6 +1132,9 @@ body.modal-open .mm-slideout {
 .hr_line {
   margin-top: 80px;
   opacity: 0.3;
+}
+.hr_line_margin {
+  margin-bottom: 90px;
 }
 
 .prand_forumla_purpose {
@@ -1500,6 +1508,536 @@ body.modal-open .mm-slideout {
   }
 }
 
+.inner_page_header {
+  padding: 70px 0;
+  padding-bottom: 20px;
+  .inner_project_logo {
+    img {
+      max-width: 350px;
+    }
+    p {
+      color: rgba(#1b1b1b, 0.7);
+      font-size: 0.8rem;
+      font-family: $helight;
+      text-transform: capitalize;
+      margin-top: 10px;
+    }
+  }
+  .inner_page_img {
+    margin-top: 30px;
+    .card_img {
+      height: 750px;
+    }
+  }
+  .inner_page_description {
+    margin-top: 40px;
+  }
+  .inner_page_description_content {
+    h6 {
+      color: #2e55a4;
+      font-size: 1rem;
+      font-family: $helight;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+    h5 {
+      color: #1b1b1b;
+      font-size: 2.5rem;
+      text-transform: capitalize;
+      margin: 0;
+    }
+  }
+  .inner_page_description_btn {
+    padding-top: 30px;
+    p {
+      color: rgba(#1b1b1b, 0.8);
+      font-size: 1.1rem;
+      font-family: $helight;
+      line-height: 155.556%;
+      text-transform: capitalize;
+    }
+    .show_master_btn {
+      margin-top: 40px;
+      a {
+        display: block;
+        background-color: #2e55a4;
+        color: #fff;
+        font-size: 1rem;
+        font-style: normal;
+        text-transform: uppercase;
+        padding: 25px 32px;
+        text-align: center;
+        font-family: $helight;
+        border: 1px solid #2e55a4;
+        &:hover {
+          background-color: #fff;
+          color: #2e55a4;
+        }
+      }
+    }
+  }
+}
+
+.amenties {
+  padding: 100px 0 50px 0;
+  .section_header {
+    text-align: center;
+    // margin-bottom: 120px;
+    margin-bottom: 0;
+    p {
+      color: rgba(#1b1b1b, 0.7);
+      font-size: 1rem;
+      font-style: normal;
+      font-family: $helight;
+      text-transform: capitalize;
+      margin-top: 20px;
+    }
+  }
+}
+
+.amentie_card {
+  margin-top: 150px;
+  text-align: center;
+  .card_icon {
+    margin-bottom: 15px;
+    height: 60px;
+  }
+  .card_title {
+    h5 {
+      color: #1b1b1b;
+      font-size: 1.1rem;
+    }
+  }
+  .card_text {
+    p {
+      color: #1b1b1b;
+      font-size: 0.8rem;
+      font-family: $helight;
+      line-height: 139.286%;
+      width: 50%;
+      margin: auto;
+      margin-top: 10px;
+    }
+  }
+}
+
+.project_location {
+  margin-top: 100px;
+  .section_header {
+    text-align: center;
+    p {
+      color: rgba(#1b1b1b, 0.7);
+      font-size: 1rem;
+      font-family: $helight;
+      // line-height: 155.556%;
+      text-transform: capitalize;
+      margin-top: 32px;
+    }
+  }
+  .map_information {
+    h5 {
+      color: #000;
+      font-size: 1.3rem;
+      text-transform: capitalize;
+      margin-bottom: 25px;
+    }
+    .location_info {
+      li {
+        margin-bottom: 15px;
+        span {
+          width: 50%;
+          &:first-child {
+            color: #000;
+            font-size: 1rem;
+            font-family: $helight;
+            text-transform: capitalize;
+          }
+          &:last-child {
+            color: #000;
+            font-size: 1rem;
+            text-transform: capitalize;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.project_gallery {
+  margin-top: 100px;
+  padding-bottom: 40px;
+  .section_header {
+    text-align: center;
+    p {
+      color: rgba(#1b1b1b, 0.7);
+      font-size: 1rem;
+      font-family: $helight;
+      // line-height: 155.556%;
+      text-transform: capitalize;
+      margin-top: 32px;
+    }
+  }
+  .project_gallery_tabs {
+    .navs_wrap {
+      .nav {
+        flex-wrap: nowrap;
+        overflow: auto;
+        padding-bottom: 5px;
+        .nav-link {
+          color: rgba(#1b1b1b, 0.4);
+          min-width: max-content;
+          font-size: 18px;
+          font-style: normal;
+          font-family: $helight;
+          line-height: 30px;
+          letter-spacing: 0.81px;
+          text-transform: uppercase;
+          background-color: transparent;
+          transition: all 0.3s ease-in-out;
+          border-right: 1px solid #eee;
+          padding-left: 20px;
+          padding-right: 20px;
+          border-radius: 0;
+          &.active {
+            color: rgba(#1b1b1b, 1);
+          }
+        }
+        .nav-item {
+          &:last-child {
+            .nav-link {
+              border-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .gallery_cards_slider {
+      // margin-bottom: 90px;
+      .slick-list {
+        margin: 0 -12px;
+      }
+      .slick-next {
+        bottom: -60px;
+        right: 10px;
+        top: unset;
+        z-index: 4;
+      }
+      .slick-prev {
+        top: unset;
+        bottom: -60px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.gallery_card {
+  margin-top: 30px;
+  margin: 0 12px;
+  cursor: pointer;
+  .card_img {
+    height: 300px;
+    .video_icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      width: 65px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.construction_update {
+  .construction_update_slider {
+    // margin-bottom: 90px;
+    .slick-next {
+      bottom: -60px;
+      right: 10px;
+      top: unset;
+      z-index: 4;
+    }
+    .slick-prev {
+      top: unset;
+      bottom: -60px;
+      left: 10px;
+    }
+  }
+}
+
+.construction_update_card {
+  .card_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card_content {
+      text-align: center;
+      position: relative;
+      z-index: 4;
+      h6 {
+        color: #fff;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-family: $helight;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+      }
+      h5 {
+        color: #fff;
+        font-size: 2.6rem;
+        font-family: $heblack;
+        letter-spacing: 2.25px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.other_successful_projects {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  .section_header {
+    text-align: center;
+    margin-bottom: 80px;
+    p {
+      color: rgba(#1b1b1b, 0.7);
+      font-size: 1rem;
+      font-family: $helight;
+      text-transform: capitalize;
+      margin-top: 32px;
+    }
+  }
+  .slick-dots {
+    bottom: -80px;
+  }
+  .slick-next {
+    bottom: -100px;
+    right: 10px;
+    top: unset;
+    z-index: 4;
+  }
+  .slick-prev {
+    top: unset;
+    bottom: -100px;
+    left: 10px;
+  }
+}
+.other_project_card {
+  text-align: center;
+  img {
+    margin: auto;
+  }
+}
+
+.contact_us_section {
+  padding: 120px 0;
+  padding-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+
+  .contact_us_contnet {
+    .section_header {
+      h5 {
+        color: #1b1b1b;
+        /* headtitle bold */
+        font-size: 2.5rem;
+        // font-family: $hebold;
+        // margin-bottom: 32px;
+      }
+      p {
+        color: #000;
+        font-size: 1.1rem;
+        font-family: $helight;
+        text-transform: capitalize;
+      }
+    }
+
+    .content {
+      margin-bottom: 45px;
+
+      h6 {
+        color: $fontColor;
+        font-size: 1.1rem;
+      }
+      a {
+        color: #2e55a4;
+      }
+    }
+  }
+
+  .contact_us_form {
+  }
+}
+
+.form_style {
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .nice-select {
+    float: none;
+    width: 100%;
+    .list {
+      width: 100%;
+    }
+  }
+
+  label {
+    color: #1b1b1b;
+    font-size: 1rem;
+    font-family: $helight;
+    margin-bottom: 12px;
+  }
+
+  .form-control {
+    border-radius: 0;
+    border: 1px solid rgba(37, 37, 37, 0.202);
+    height: 56px;
+    background-color: transparent;
+    font-family: $helight;
+  }
+
+  textarea.form-control {
+    height: 170px;
+    resize: none;
+  }
+
+  .conditions {
+    margin-top: 30px;
+
+    label {
+      color: #000;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    p {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 0.9rem;
+      font-weight: 400;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .btn_submit {
+    margin-top: 22px;
+    .btn_style {
+      width: 279px;
+      height: 56px;
+      border-radius: 0;
+      background: #2e55a4;
+      border: 1px solid #2e55a4;
+      font-family: $helight;
+      &:hover {
+        background-color: #fff;
+        color: #2e55a4;
+      }
+    }
+  }
+
+  .imageInput_label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      color: #252525;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+
+  #imageInput {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .file_link {
+    border: 1px solid #252525;
+    padding: 10px;
+    width: fit-content;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+}
+
+.offices {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .oficces_conten {
+    background: rgba(#2e55a4, 0.05);
+    height: 100%;
+    padding: 64px 40px;
+    .header {
+      color: #1b1b1b;
+      font-size: 2.5rem;
+      font-style: normal;
+      margin-bottom: 100px;
+    }
+  }
+  .ofice_img {
+    height: 100%;
+    min-height: 500px;
+    .card_img {
+      height: 100%;
+    }
+  }
+
+  .location_card{
+    .card_body {
+      h6 {
+        color: #1b1b1b;
+        font-size: 1.2rem;
+        font-style: normal;
+      }
+      h4 {
+        color: rgba(#1b1b1b, 0.8);
+        font-size: 1.2rem;
+        margin-bottom: 32px;
+      }
+      p {
+        color: rgba(#1b1b1b, 0.8);
+        font-size: 1rem;
+        line-height: 137.5%;
+        margin-bottom: 40px;
+      }
+      a {
+        color: #2e55a4;
+        font-size: 0.8rem;
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  .second_locations{
+    margin-top: 75px;
+    .location_card{
+      border-right: 3px solid #F1F2F2;
+      margin-bottom: 50px;
+      p{
+        margin-bottom: 10px;
+      }
+    }
+    .last_location_card{
+      border-right: 0;
+    }
+  }
+}
+
+.call_request_hr{
+  margin-bottom: 100px;
+}
+
 /* ================================================================ */
 
 .footer {
@@ -1627,6 +2165,12 @@ body.modal-open .mm-slideout {
   }
 }
 
+@media(max-width: 1400px){
+  .contact_us_section .contact_us_contnet .section_header h5{
+    font-size: 2.4rem;
+  }
+}
+
 @media (max-width: 1300px) {
   .custom_navbar .navbar_links .nav_item {
     margin-left: 20px;
@@ -1650,6 +2194,9 @@ body.modal-open .mm-slideout {
   }
   .burger_menu {
     display: block;
+  }
+  .amentie_card .card_text p {
+    width: 100%;
   }
 }
 
@@ -1693,6 +2240,15 @@ body.modal-open .mm-slideout {
     width: 100%;
     top: 0;
     z-index: -1;
+  }
+  .inner_page_header .inner_page_img .card_img {
+    height: 400px;
+  }
+  .amentie_card {
+    margin-top: 100px;
+  }
+  .project_location .map_information h5 {
+    margin-top: 50px;
   }
 }
 
@@ -1825,15 +2381,24 @@ body.modal-open .mm-slideout {
   }
   .time_line_vector {
     margin-top: 120px;
-    ul{
+    ul {
       transform: rotate(90deg);
     }
-    .reload_btn{
+    .reload_btn {
       margin-top: 400px;
     }
   }
-  .our_legacy_content{
+  .our_legacy_content {
     margin-top: 100px;
+  }
+  .offices .oficces_conten .header{
+    margin-bottom: 50px;
+  }
+  .offices {
+    margin-top: 0;
+    .ofice_img{
+      min-height: 250px;
+    }
   }
 }
 

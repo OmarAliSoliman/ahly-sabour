@@ -149,6 +149,96 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".gallery_cards_slider").length) {
+    $(".gallery_cards_slider").slick({
+      rows: 2,
+      slidesPerRow: 3,
+      dots: true,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            rows: 1,
+            slidesPerRow: 2,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            rows: 1,
+            slidesPerRow: 1,
+            dots: false,
+
+          },
+        },
+      ],
+    });
+  }
+
+  if ($(".construction_update_slider").length) {
+    $(".construction_update_slider").slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: true,
+      dots: true,
+      speed: 300,
+      infinite: true,
+      autoplaySpeed: 5000,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+          },
+        },
+      ],
+    });
+  }
+  // construction_update_slider
+
+
+  // other_successful_projects
+  if ($(".other_successful_projects_slider").length) {
+    $(".other_successful_projects_slider").slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+      dots: true,
+      speed: 300,
+      infinite: true,
+      autoplaySpeed: 5000,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+          },
+        },
+      ],
+    });
+  }
+
   if ($(".project_img_slider").length) {
     $(".project_img_slider").slick({
       dots: true,
@@ -159,6 +249,8 @@ $(document).ready(function () {
   $(".nav-pills .nav-item .nav-link").on("shown.bs.tab", function () {
     $(".projects_cards_slider").slick("setPosition");
     $(".project_img_slider").slick("setPosition");
+    $(".gallery_cards_slider").slick("setPosition");
+    $(".construction_update_slider").slick("setPosition");
     AOS.refresh();
   });
 
@@ -203,7 +295,7 @@ $(document).ready(function () {
         .from(lineDate, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" })
         .from(lineLogoDot, { scale: 0, stagger: 0.1, ease: "back.out(4.7)" })
         .from(lineLogoLine, { height: 0, stagger: 0.1, ease: "Power1.In.Out" })
-        .from(lineLogo, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" })
+        .from(lineLogo, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" });
     }
 
     timeLineAnimation.from(".time_line_vector .reload_btn", {
