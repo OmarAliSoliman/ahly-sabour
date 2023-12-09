@@ -201,9 +201,9 @@ $(document).ready(function () {
         )
         .from(lineSubCircle, { scale: 0, stagger: 0.1, ease: "back.out(4.7)" })
         .from(lineDate, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" })
-        .from(lineLogoLine, { height: 0, stagger: 0.1, ease: "Power1.In.Out" })
         .from(lineLogoDot, { scale: 0, stagger: 0.1, ease: "back.out(4.7)" })
-        .from(lineLogo, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" });
+        .from(lineLogoLine, { height: 0, stagger: 0.1, ease: "Power1.In.Out" })
+        .from(lineLogo, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" })
     }
 
     timeLineAnimation.from(".time_line_vector .reload_btn", {
