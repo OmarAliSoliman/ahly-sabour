@@ -975,25 +975,25 @@ body.modal-open .mm-slideout {
 }
 .time_line_vector {
   .single_time_line {
-    border: 1px solid #000;
+    // border: 1px solid #000;
     padding: 0 62px;
     text-align: center;
-    height: 300px;
+    height: 270px;
     position: relative;
-    width: 150px;
+    width: 20%;
     &:first-child {
       // padding-left: 0;
     }
     .date {
       // margin-bottom: 10px;
       position: absolute;
-      top: 0;
+      top: 80px;
       left: 50%;
       transform: translate(-50%, 0%);
       h6 {
         color: #1b1b1b;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
     }
     .circle {
@@ -1009,10 +1009,11 @@ body.modal-open .mm-slideout {
       position: absolute;
       top: 50%;
       left: 50%;
+      z-index: 1;
       transform: translate(-50%, -50%);
       .sub_circle {
-        width: 20px;
-        height: 20px;
+        width: 17px;
+        height: 17px;
         background-color: #2e55a4;
         border-radius: 50%;
       }
@@ -1024,7 +1025,7 @@ body.modal-open .mm-slideout {
       transform: translate(-50%, 0%);
     }
     .logo_line {
-      height: 100px;
+      height: 70px;
       width: 1px;
       margin: auto;
       background-color: #1b1b1b;
@@ -1043,8 +1044,18 @@ body.modal-open .mm-slideout {
     .logo {
       margin-top: 20px;
       img {
-        width: 90px;
+        width: 120px;
       }
+    }
+    .line_throw {
+      width: 100%;
+      height: 1px;
+      content: "";
+      background: #2e55a4;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
     }
   }
   .opsite_single_time_line {
@@ -1052,9 +1063,48 @@ body.modal-open .mm-slideout {
       top: 0;
       bottom: unset;
     }
+    .logo_line {
+      .line_dot {
+        top: 0;
+        bottom: unset;
+      }
+    }
+    .logo {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
     .date {
-      bottom: 0 !important;
+      bottom: 70px !important;
       top: unset !important;
+    }
+  }
+
+  .reload_btn {
+    margin-top: 60px;
+    text-align: center;
+    button {
+      border: 1px solid #e3e3e3;
+      background: #fff;
+      display: inline-flex;
+      padding: 12px 24px;
+      align-items: center;
+      span {
+        color: #bcbcbc;
+        font-size: 1rem;
+        margin-left: 10px;
+        font-family: $helight;
+        transition: all .3s ease-in-out;
+      }
+      img{
+        width: 20px;
+      }
+      &:hover{
+        background-color: #2e55a4;
+        border-color: #2e55a4;
+        span{
+          color: #fff;
+        }
+      }
     }
   }
 }
@@ -1772,6 +1822,18 @@ body.modal-open .mm-slideout {
   }
   .avilible_projects .slider_item.slick-current .card_img {
     height: 400px;
+  }
+  .time_line_vector {
+    margin-top: 120px;
+    ul{
+      transform: rotate(90deg);
+    }
+    .reload_btn{
+      margin-top: 400px;
+    }
+  }
+  .our_legacy_content{
+    margin-top: 100px;
   }
 }
 
