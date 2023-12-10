@@ -419,14 +419,44 @@ $(document).ready(function () {
     });
   }
 
+  
+
   AOS.init();
+});
+
+var overlay = document.querySelector(".splashoverlay"),
+  loader = document.querySelector(".overlay-loader"),
+  overlayTL = new TimelineMax(),
+  loaderTL = new TimelineMax();
+
+var animateOut = function () {
+  overlayTL.to(overlay, 0.6, {
+    bottom: "100%",
+    ease: Power4.easeInOut,
+    height: 0,
+    delay: 0.25,
+  });
+  loaderTL.to(loader, 0.5, { y: "-40", opacity: 0 });
+  gsap.to(counter, 0.5, { y: "-40", opacity: 0 });
+};
+
+// counter loading page
+var Cont = { val: 0 },
+  NewVal = 100;
+
+TweenLite.to(Cont, 15, {
+  val: NewVal,
+  roundProps: "val",
+  onUpdate: function () {
+    document.getElementById("counter").innerHTML = Cont.val;
+  },
 });
 
 $(window).on("load", function () {
   var currentDir = $("body").css("direction");
-  // setTimeout(() => {
-  //   animateOut();
-  // }, 2000);
+  setTimeout(() => {
+    animateOut();
+  }, 2000);
   new Mmenu("#menu", {
     offCanvas: {
       slidingSubmenus: false,
