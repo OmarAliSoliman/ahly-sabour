@@ -486,13 +486,15 @@
           <div class="tab-pane fade show active" id="pills-Unittypes" role="tabpanel"
             aria-labelledby="pills-Unittypes-tab" tabindex="0">
 
-            <div class="gallery_cards">
+            <div class="gallery_cards" id="gallery_card_for_modal">
               <div class="gallery_cards_slider arrow_style dots_style">
-                <div class="slider_item">
+
+                <div class="slider_item" data-gallery-index="0">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
-                        <img src="./assets/images/galery1.png" alt="">
+                        <video src="./assets/videos/video.mp4" muted playsinline></video>
+                        <!-- <img src="./assets/images/galery1.png" alt=""> -->
                       </div>
                       <div class="video_icon">
                         <div class="vid_ic">
@@ -502,7 +504,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider_item">
+
+                <div class="slider_item" data-gallery-index="1">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -512,7 +515,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="2">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -523,7 +526,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="3">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -533,7 +536,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="4">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -543,7 +546,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="5">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -553,7 +556,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="6">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -563,7 +566,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="7">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -573,7 +576,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="8">
                   <div class="gallery_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -610,7 +613,7 @@
   <div class="project_gallery construction_update">
     <div class="container-fluid pd-100">
       <div class="section_header">
-        <h5><span>Project</span> Gallery</h5>
+        <h5>Construction <span>Update</span></h5>
         <p>"Unveiling Our Exceptional Project Locations Across the Region"</p>
       </div>
 
@@ -636,9 +639,9 @@
           <div class="tab-pane fade show active" id="pills-constrPhoto" role="tabpanel"
             aria-labelledby="pills-Unittypes-tab" tabindex="0">
 
-            <div class="gallery_cards">
+            <div class="gallery_cards" id="construction_card_for_modal">
               <div class="construction_update_slider arrow_style dots_style">
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="0">
                   <div class="gallery_card construction_update_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -652,7 +655,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="1">
                   <div class="gallery_card construction_update_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -666,7 +669,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="2">
                   <div class="gallery_card construction_update_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -680,7 +683,7 @@
                   </div>
                 </div>
 
-                <div class="slider_item">
+                <div class="slider_item" data-gallery-index="3">
                   <div class="gallery_card construction_update_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -693,7 +696,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider_item">
+
+                <div class="slider_item" data-gallery-index="4">
                   <div class="gallery_card construction_update_card">
                     <div class="card_img">
                       <div class="img_parent">
@@ -706,6 +710,7 @@
                     </div>
                   </div>
                 </div>
+
               </div>
 
             </div>
@@ -972,6 +977,160 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+
+
+  <!-- gallery modal -->
+  <div class="gallery_modal" id="gallery_modal_img">
+    <div class="gallery_modal_wrapper">
+      <div class="close_modal">
+        <img src="./assets/images/close.svg" alt="">
+      </div>
+      <div class="project_img_slider arrow_style dots_style">
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <video src="./assets/videos/nine.mp4" autoplay loop muted playsinline></video>
+                <!-- <img src="./assets/images/galery1.png" alt=""> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery2.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery5.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery6.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery5.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery6.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+   <!-- construction modal -->
+   <div class="gallery_modal" id="construction_modal_img">
+    <div class="gallery_modal_wrapper">
+      <div class="close_modal">
+        <img src="./assets/images/close.svg" alt="">
+      </div>
+      <div class="project_img_slider arrow_style dots_style">
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <video src="./assets/videos/nine.mp4" autoplay loop muted playsinline></video>
+                <!-- <img src="./assets/images/galery1.png" alt=""> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery2.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="project_card_img">
+            <div class="card_img">
+              <div class="img_parent">
+                <img src="./assets/images/galery4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

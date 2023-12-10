@@ -1831,6 +1831,76 @@ body.modal-open .mm-slideout {
   z-index: 99;
 }
 
+.gallery_modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(27, 27, 27, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.gallery_modal .gallery_modal_wrapper {
+  position: relative;
+  transform: translateY(200px);
+  transition: all 0.3s ease-in-out;
+}
+.gallery_modal .gallery_modal_wrapper .close_modal {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.gallery_modal .gallery_modal_wrapper .close_modal:hover {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.gallery_modal_wrapper {
+  width: 85%;
+  height: 798px;
+  margin: auto;
+  max-width: 100%;
+}
+.gallery_modal_wrapper .card_img {
+  height: 798px;
+}
+
+.active_gallery_modal {
+  overflow: hidden;
+}
+.active_gallery_modal #gallery_modal_img {
+  opacity: 1 !important;
+  z-index: 999;
+}
+.active_gallery_modal #gallery_modal_img .gallery_modal_wrapper {
+  transform: translateY(0px) !important;
+}
+
+.active_construction_modal {
+  overflow: hidden;
+}
+.active_construction_modal #construction_modal_img {
+  opacity: 1 !important;
+  z-index: 999;
+}
+.active_construction_modal #construction_modal_img .gallery_modal_wrapper {
+  transform: translateY(0px) !important;
+}
+
 /* ================================================================ */
 .footer {
   background: #1b1b1b;
@@ -1948,6 +2018,9 @@ body.modal-open .mm-slideout {
 @media (max-width: 1500px) {
   .custom_navbar .navbar_links .nav_item {
     margin-left: 35px;
+  }
+  .gallery_modal_wrapper {
+    width: 90%;
   }
 }
 @media (max-width: 1400px) {
@@ -2171,6 +2244,28 @@ body.modal-open .mm-slideout {
   }
   .offices .ofice_img {
     min-height: 250px;
+  }
+  .thanks_modal h5 {
+    font-size: 3.5rem;
+  }
+  .thanks_modal h6 {
+    font-size: 1.2rem;
+  }
+  .gallery_modal_wrapper .card_img,
+  .gallery_modal_wrapper {
+    height: 400px !important;
+  }
+  .gallery_modal .gallery_modal_wrapper .close_modal {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-height: 800px) {
+  .gallery_modal_wrapper {
+    height: 600px;
+  }
+  .gallery_modal_wrapper .card_img {
+    height: 600px;
   }
 }
 /* ================================================================ */

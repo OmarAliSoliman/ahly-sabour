@@ -241,6 +241,14 @@ $(document).ready(function () {
     $(".project_img_slider").slick({
       dots: true,
       arrows: true,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            dots: false,
+          },
+        },
+      ],
     });
   }
 
@@ -355,6 +363,61 @@ $(document).ready(function () {
 
   }
   
+
+  if($("#gallery_card_for_modal").length){
+    $("#gallery_card_for_modal .slider_item").map((index, item)=>{
+      $(item).on("click", function (e) {
+        var video = $('.gallery_modal_wrapper video');
+        video.map((index, item)=>{
+          console.log(item);
+          item.currentTime = 0;
+          item.load();
+        })
+        var slideIndex = $(item).attr("data-gallery-index");
+        $("#gallery_modal_img .project_img_slider").slick('slickGoTo', slideIndex);
+        $("html").addClass("active_gallery_modal");
+      })
+    })
+
+
+    $(".gallery_modal .close_modal").on("click", function(){
+      $("html").removeClass("active_gallery_modal");
+      var video = $('.gallery_modal_wrapper video');
+      video.map((index, item)=>{
+        console.log(item);
+        // item.currentTime = 0;
+        item.pause();
+      })
+    });
+  }
+
+
+  if($("#construction_card_for_modal").length){
+    $("#construction_card_for_modal .slider_item").map((index, item)=>{
+      $(item).on("click", function (e) {
+        var video = $('.gallery_modal_wrapper video');
+        video.map((index, item)=>{
+          console.log(item);
+          item.currentTime = 0;
+          item.load();
+        })
+        var slideIndex = $(item).attr("data-gallery-index");
+        $("#construction_modal_img .project_img_slider").slick('slickGoTo', slideIndex);
+        $("html").addClass("active_construction_modal");
+      })
+    })
+
+
+    $(".gallery_modal .close_modal").on("click", function(){
+      $("html").removeClass("active_construction_modal");
+      var video = $('.gallery_modal_wrapper video');
+      video.map((index, item)=>{
+        console.log(item);
+        // item.currentTime = 0;
+        item.pause();
+      })
+    });
+  }
 
   AOS.init();
 });
