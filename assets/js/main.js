@@ -169,7 +169,6 @@ $(document).ready(function () {
             rows: 1,
             slidesPerRow: 1,
             dots: false,
-
           },
         },
       ],
@@ -206,7 +205,6 @@ $(document).ready(function () {
     });
   }
   // construction_update_slider
-
 
   // other_successful_projects
   if ($(".other_successful_projects_slider").length) {
@@ -342,6 +340,21 @@ $(document).ready(function () {
       x: -4,
       ease: "powerIn.Out",
     });
+
+  if ($("#form_submit").length) {
+    let thanksSet;
+    $("#form_submit").on("click", function (e) {
+      e.preventDefault();
+      $("html").addClass("active_thanks_modal");
+
+      thanksSet = setTimeout(() => {
+        $("html").removeClass("active_thanks_modal");
+      }, 3000);
+    });
+    clearTimeout(thanksSet);
+
+  }
+  
 
   AOS.init();
 });

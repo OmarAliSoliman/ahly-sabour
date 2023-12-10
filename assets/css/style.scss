@@ -1993,7 +1993,7 @@ body.modal-open .mm-slideout {
     }
   }
 
-  .location_card{
+  .location_card {
     .card_body {
       h6 {
         color: #1b1b1b;
@@ -2019,23 +2019,64 @@ body.modal-open .mm-slideout {
     }
   }
 
-  .second_locations{
+  .second_locations {
     margin-top: 75px;
-    .location_card{
-      border-right: 3px solid #F1F2F2;
+    .location_card {
+      border-right: 3px solid #f1f2f2;
       margin-bottom: 50px;
-      p{
+      p {
         margin-bottom: 10px;
       }
     }
-    .last_location_card{
+    .last_location_card {
       border-right: 0;
     }
   }
 }
 
-.call_request_hr{
+.call_request_hr {
   margin-bottom: 100px;
+}
+
+.html_overhidden{
+  overflow: hidden;
+}
+
+.thanks_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  z-index: -1;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all .3s ease-in-out;
+  h5 {
+    color: #2e55a4;
+    font-size: 4.3rem;
+    letter-spacing: -1.44px;
+  }
+  h6 {
+    color: #2e55a4;
+    font-size: 1.5rem;
+    letter-spacing: -0.48px;
+  }
+}
+
+.active_thanks_modal{
+  overflow: hidden;
+  .thanks_modal{
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
+    z-index: 99;
+  }
 }
 
 /* ================================================================ */
@@ -2165,8 +2206,8 @@ body.modal-open .mm-slideout {
   }
 }
 
-@media(max-width: 1400px){
-  .contact_us_section .contact_us_contnet .section_header h5{
+@media (max-width: 1400px) {
+  .contact_us_section .contact_us_contnet .section_header h5 {
     font-size: 2.4rem;
   }
 }
@@ -2391,12 +2432,12 @@ body.modal-open .mm-slideout {
   .our_legacy_content {
     margin-top: 100px;
   }
-  .offices .oficces_conten .header{
+  .offices .oficces_conten .header {
     margin-bottom: 50px;
   }
   .offices {
     margin-top: 0;
-    .ofice_img{
+    .ofice_img {
       min-height: 250px;
     }
   }

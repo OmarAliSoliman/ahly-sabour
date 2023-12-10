@@ -1776,7 +1776,7 @@ body.modal-open .mm-slideout {
   margin-top: 75px;
 }
 .offices .second_locations .location_card {
-  border-right: 3px solid #F1F2F2;
+  border-right: 3px solid #f1f2f2;
   margin-bottom: 50px;
 }
 .offices .second_locations .location_card p {
@@ -1788,6 +1788,47 @@ body.modal-open .mm-slideout {
 
 .call_request_hr {
   margin-bottom: 100px;
+}
+
+.html_overhidden {
+  overflow: hidden;
+}
+
+.thanks_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  z-index: -1;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+.thanks_modal h5 {
+  color: #2e55a4;
+  font-size: 4.3rem;
+  letter-spacing: -1.44px;
+}
+.thanks_modal h6 {
+  color: #2e55a4;
+  font-size: 1.5rem;
+  letter-spacing: -0.48px;
+}
+
+.active_thanks_modal {
+  overflow: hidden;
+}
+.active_thanks_modal .thanks_modal {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+  z-index: 99;
 }
 
 /* ================================================================ */
