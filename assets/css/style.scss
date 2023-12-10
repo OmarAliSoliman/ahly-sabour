@@ -232,6 +232,7 @@ body.modal-open .mm-slideout {
   box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.07);
   padding: 24px 0;
   // position: sticky;
+  position: relative;
   // top: 0;
   z-index: 9;
   width: 100%;
@@ -503,6 +504,7 @@ body.modal-open .mm-slideout {
         line-height: 36px;
         img {
           margin-left: 10px;
+          transition: all .3s ease-in-out;
         }
       }
 
@@ -514,6 +516,11 @@ body.modal-open .mm-slideout {
         height: 1px;
         left: 0;
         background: #2e55a4;
+      }
+      &:hover{
+        img{
+          margin-left: 20px;
+        }
       }
     }
   }
@@ -728,6 +735,9 @@ body.modal-open .mm-slideout {
       padding: 20px 50px;
       color: #fff;
       font-size: 1rem;
+      &:hover{
+        background-color: rgba(#2e55a4, .8);
+      }
     }
   }
 
@@ -852,6 +862,7 @@ body.modal-open .mm-slideout {
         color: #2e55a4;
         font-size: 0.8rem;
         margin-right: 8px;
+        transition: all .3s ease-in-out;
       }
 
       &::after {
@@ -862,6 +873,15 @@ body.modal-open .mm-slideout {
         height: 1px;
         left: 0;
         background: #2e55a4;
+        transition: all .4s ease-in;
+      }
+      &:hover{
+        &::after {
+          // width: 50%;
+        }
+        span{
+          margin-right: 15px;
+        }
       }
     }
   }
