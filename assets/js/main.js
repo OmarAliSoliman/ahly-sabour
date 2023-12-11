@@ -419,6 +419,18 @@ $(document).ready(function () {
     });
   }
 
+
+  if($("#show_master_btn_link").length){
+    $("#show_master_btn_link").on("click", function (e) {
+      $("html").addClass("active_master_plan_modal");
+    })
+
+
+    $("#master_plan_modal_img .close_modal").on("click", function(){
+      $("html").removeClass("active_master_plan_modal");
+    });
+  }
+
   
 
   AOS.init();

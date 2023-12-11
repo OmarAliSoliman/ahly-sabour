@@ -19,6 +19,14 @@
   font-family: helight;
   src: url("../fonts/HelveticaNeueLight.ttf");
 }
+@font-face {
+  font-family: helight2;
+  src: url("../fonts/HelveticaNeueLight.woff");
+}
+@font-face {
+  font-family: helight3;
+  src: url("../fonts/HelveticaNeueLight.woff2");
+}
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -1320,22 +1328,28 @@ body.modal-open .mm-slideout {
   text-transform: capitalize;
   margin-top: 12px;
 }
+.our_developments_project_card .card_content .content {
+  width: 90%;
+}
 .our_developments_project_card .card_content .content p {
   color: rgba(27, 27, 27, 0.8);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-family: helight;
-  line-height: 120%;
+  line-height: 135%;
   letter-spacing: -0.2px;
 }
+.our_developments_project_card .card_content .content_width {
+  width: 75%;
+}
 .our_developments_project_card .main_img .card_img {
-  height: 550px;
+  height: 580px;
 }
 
 .custom_our_developments_project_card .sub_img .card_img {
   height: 350px;
 }
 .custom_our_developments_project_card .main_img .card_img {
-  height: 378px;
+  height: 400px;
 }
 
 .inner_page_header {
@@ -1396,8 +1410,8 @@ body.modal-open .mm-slideout {
   text-transform: uppercase;
   padding: 25px 32px;
   text-align: center;
-  font-family: helight;
   border: 1px solid #2e55a4;
+  cursor: pointer;
 }
 .inner_page_header .inner_page_description_btn .show_master_btn a:hover {
   background-color: #fff;
@@ -1421,25 +1435,30 @@ body.modal-open .mm-slideout {
 }
 
 .amentie_card {
-  margin-top: 150px;
+  margin-top: 80px;
   text-align: center;
 }
 .amentie_card .card_icon {
   margin-bottom: 15px;
   height: 60px;
+  animation: aminitelogo 1s 0.2s infinite forwards ease-in-out;
+  animation-play-state: paused;
 }
 .amentie_card .card_title h5 {
   color: #1b1b1b;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 .amentie_card .card_text p {
   color: #1b1b1b;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: helight;
   line-height: 139.286%;
-  width: 50%;
+  width: 70%;
   margin: auto;
   margin-top: 10px;
+}
+.amentie_card:hover .card_icon {
+  animation-play-state: running;
 }
 
 .project_location {
@@ -1480,6 +1499,17 @@ body.modal-open .mm-slideout {
   text-align: center;
 }
 
+@keyframes aminitelogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .project_gallery {
   margin-top: 100px;
   padding-bottom: 40px;
@@ -1912,6 +1942,62 @@ body.modal-open .mm-slideout {
   z-index: 999;
 }
 .active_construction_modal #construction_modal_img .gallery_modal_wrapper {
+  transform: translateY(0px) !important;
+}
+
+.master_plan_modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(27, 27, 27, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.master_plan_modal .master_plan_modal_wrapper {
+  width: 85%;
+  height: 798px;
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+  transform: translateY(200px);
+  transition: all 0.3s ease-in-out;
+}
+.master_plan_modal .master_plan_modal_wrapper .card_img {
+  height: 798px;
+}
+.master_plan_modal .close_modal {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.master_plan_modal .close_modal:hover {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.active_master_plan_modal {
+  overflow: hidden;
+}
+.active_master_plan_modal #master_plan_modal_img {
+  opacity: 1 !important;
+  z-index: 999;
+}
+.active_master_plan_modal #master_plan_modal_img .master_plan_modal_wrapper {
   transform: translateY(0px) !important;
 }
 
@@ -2348,12 +2434,17 @@ body.modal-open .mm-slideout {
     font-size: 1.2rem;
   }
   .gallery_modal_wrapper .card_img,
-  .gallery_modal_wrapper {
+  .gallery_modal_wrapper,
+  .master_plan_modal .master_plan_modal_wrapper .card_img,
+  .master_plan_modal .master_plan_modal_wrapper {
     height: 400px !important;
   }
-  .gallery_modal .gallery_modal_wrapper .close_modal {
+  .gallery_modal .gallery_modal_wrapper .close_modal,
+  .master_plan_modal .close_modal {
     width: 60px;
     height: 60px;
+    top: 12px;
+    left: 12px;
   }
   .page_under_construction .page_under_construction_wrap h5 {
     font-size: 2rem;
@@ -2371,12 +2462,18 @@ body.modal-open .mm-slideout {
     width: 60px;
     height: 60px;
   }
+  .project_location .map_information .location_info li span:last-child {
+    text-align: right;
+  }
+  .custom_breadcrumb .path li {
+    padding: 0 10px;
+  }
 }
 @media (max-height: 800px) {
-  .gallery_modal_wrapper {
+  .gallery_modal_wrapper, .master_plan_modal .master_plan_modal_wrapper {
     height: 600px;
   }
-  .gallery_modal_wrapper .card_img {
+  .gallery_modal_wrapper .card_img, .master_plan_modal .master_plan_modal_wrapper .card_img {
     height: 600px;
   }
 }

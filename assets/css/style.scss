@@ -29,6 +29,16 @@ $fontColor: #252525;
   src: url("../fonts/HelveticaNeueLight.ttf");
 }
 
+@font-face {
+  font-family: helight2;
+  src: url("../fonts/HelveticaNeueLight.woff");
+}
+
+@font-face {
+  font-family: helight3;
+  src: url("../fonts/HelveticaNeueLight.woff2");
+}
+
 $heregular: heregular;
 $hemedium: hemedium;
 $hebold: hebold;
@@ -504,7 +514,7 @@ body.modal-open .mm-slideout {
         line-height: 36px;
         img {
           margin-left: 10px;
-          transition: all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
         }
       }
 
@@ -517,8 +527,8 @@ body.modal-open .mm-slideout {
         left: 0;
         background: #2e55a4;
       }
-      &:hover{
-        img{
+      &:hover {
+        img {
           margin-left: 20px;
         }
       }
@@ -735,8 +745,8 @@ body.modal-open .mm-slideout {
       padding: 20px 50px;
       color: #fff;
       font-size: 1rem;
-      &:hover{
-        background-color: rgba(#2e55a4, .8);
+      &:hover {
+        background-color: rgba(#2e55a4, 0.8);
       }
     }
   }
@@ -862,7 +872,7 @@ body.modal-open .mm-slideout {
         color: #2e55a4;
         font-size: 0.8rem;
         margin-right: 8px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       &::after {
@@ -873,13 +883,13 @@ body.modal-open .mm-slideout {
         height: 1px;
         left: 0;
         background: #2e55a4;
-        transition: all .4s ease-in;
+        transition: all 0.4s ease-in;
       }
-      &:hover{
+      &:hover {
         &::after {
           // width: 50%;
         }
-        span{
+        span {
           margin-right: 15px;
         }
       }
@@ -1500,18 +1510,26 @@ body.modal-open .mm-slideout {
       }
     }
     .content {
+      // border: 1px solid #000;
+      width: 90%;
+
       p {
         color: rgba(#1b1b1b, 0.8);
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         font-family: $helight;
-        line-height: 120%;
+        // font-weight: 400;
+        line-height: 135%;
         letter-spacing: -0.2px;
       }
     }
+    .content_width {
+      width: 75%;
+    }
   }
+
   .main_img {
     .card_img {
-      height: 550px;
+      height: 580px;
     }
   }
 }
@@ -1523,7 +1541,7 @@ body.modal-open .mm-slideout {
   }
   .main_img {
     .card_img {
-      height: 378px;
+      height: 400px;
     }
   }
 }
@@ -1587,8 +1605,9 @@ body.modal-open .mm-slideout {
         text-transform: uppercase;
         padding: 25px 32px;
         text-align: center;
-        font-family: $helight;
+        // font-family: $helight;
         border: 1px solid #2e55a4;
+        cursor: pointer;
         &:hover {
           background-color: #fff;
           color: #2e55a4;
@@ -1616,27 +1635,34 @@ body.modal-open .mm-slideout {
 }
 
 .amentie_card {
-  margin-top: 150px;
+  margin-top: 80px;
   text-align: center;
   .card_icon {
     margin-bottom: 15px;
     height: 60px;
+    animation: aminitelogo 1s 0.2s infinite forwards ease-in-out;
+    animation-play-state: paused;
   }
   .card_title {
     h5 {
       color: #1b1b1b;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
   }
   .card_text {
     p {
       color: #1b1b1b;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-family: $helight;
       line-height: 139.286%;
-      width: 50%;
+      width: 70%;
       margin: auto;
       margin-top: 10px;
+    }
+  }
+  &:hover {
+    .card_icon {
+      animation-play-state: running;
     }
   }
 }
@@ -1681,6 +1707,18 @@ body.modal-open .mm-slideout {
         }
       }
     }
+  }
+}
+
+@keyframes aminitelogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
@@ -2089,7 +2127,6 @@ body.modal-open .mm-slideout {
     letter-spacing: -0.48px;
   }
 }
-
 .active_thanks_modal {
   overflow: hidden;
   .thanks_modal {
@@ -2165,6 +2202,64 @@ body.modal-open .mm-slideout {
     opacity: 1 !important;
     z-index: 999;
     .gallery_modal_wrapper {
+      transform: translateY(0px) !important;
+    }
+  }
+}
+
+.master_plan_modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(#1b1b1b, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  .master_plan_modal_wrapper {
+    width: 85%;
+    height: 798px;
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+    transform: translateY(200px);
+    transition: all 0.3s ease-in-out;
+    .project_card_img {
+    }
+    .card_img {
+      height: 798px;
+    }
+  }
+  .close_modal {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.55);
+    }
+  }
+}
+
+.active_master_plan_modal {
+  overflow: hidden;
+  #master_plan_modal_img {
+    opacity: 1 !important;
+    z-index: 999;
+    .master_plan_modal_wrapper {
       transform: translateY(0px) !important;
     }
   }
@@ -2656,12 +2751,17 @@ body.modal-open .mm-slideout {
     }
   }
   .gallery_modal_wrapper .card_img,
-  .gallery_modal_wrapper {
+  .gallery_modal_wrapper,
+  .master_plan_modal .master_plan_modal_wrapper .card_img,
+  .master_plan_modal .master_plan_modal_wrapper {
     height: 400px !important;
   }
-  .gallery_modal .gallery_modal_wrapper .close_modal {
+  .gallery_modal .gallery_modal_wrapper .close_modal,
+  .master_plan_modal .close_modal {
     width: 60px;
     height: 60px;
+    top: 12px;
+    left: 12px;
   }
   .page_under_construction .page_under_construction_wrap h5 {
     font-size: 2rem;
@@ -2675,14 +2775,20 @@ body.modal-open .mm-slideout {
   .page_under_construction .page_under_construction_wrap a {
     padding: 20px;
   }
-  .floating_btn .pulsingButton{
+  .floating_btn .pulsingButton {
     width: 60px;
     height: 60px;
+  }
+  .project_location .map_information .location_info li span:last-child{
+    text-align: right;
+  }
+  .custom_breadcrumb .path li{
+    padding: 0 10px;
   }
 }
 
 @media (max-height: 800px) {
-  .gallery_modal_wrapper {
+  .gallery_modal_wrapper, .master_plan_modal .master_plan_modal_wrapper {
     height: 600px;
     .project_card_img {
     }
