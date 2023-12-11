@@ -213,7 +213,7 @@ body.modal-open .mm-slideout {
 }
 
 .splashoverlay {
-  z-index: 999;
+  z-index: 9999;
   background-color: $fontColor;
   position: fixed;
   top: 0;
@@ -1678,6 +1678,13 @@ body.modal-open .mm-slideout {
       // line-height: 155.556%;
       text-transform: capitalize;
       margin-top: 32px;
+    }
+  }
+  .map_iframe{
+    #map{
+      width: 100%;
+      height: 430px;
+      // background-color: #2e55a356
     }
   }
   .map_information {

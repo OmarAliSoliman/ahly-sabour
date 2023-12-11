@@ -182,7 +182,7 @@ body.modal-open .mm-slideout {
 }
 
 .splashoverlay {
-  z-index: 999;
+  z-index: 9999;
   background-color: #252525;
   position: fixed;
   top: 0;
@@ -1473,6 +1473,10 @@ body.modal-open .mm-slideout {
   font-family: helight;
   text-transform: capitalize;
   margin-top: 32px;
+}
+.project_location .map_iframe #map {
+  width: 100%;
+  height: 430px;
 }
 .project_location .map_information h5 {
   color: #000;

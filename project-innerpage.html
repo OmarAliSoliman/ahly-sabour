@@ -36,12 +36,12 @@
 
 <body>
 
-  <!-- <div class="splashoverlay">
+  <div class="splashoverlay">
     <div class="overlay-loader">
       <img src="./assets/images/splachlogo.svg" alt="">
     </div>
     <div id="counter"><span>0</span></div>
-  </div> -->
+  </div>
 
   <div class="floating_btn">
     <a href="./call-request.html" class="pulsingButton">
@@ -423,7 +423,8 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="map_iframe">
-              <img src="./assets/images/maplocation.png" alt="">
+              <!-- <img src="./assets/images/maplocation.png" alt=""> -->
+              <div id="map"></div>
             </div>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-6">
@@ -1189,6 +1190,9 @@
   <script src="./assets/js/jquery.counterup.min.js"></script>
 
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/mapscript.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp-xxZwG6DD0gZHnrkePVkbDno4vky50E&callback=initMap" sync defer></script>
+
 </body>
 
 </html>
