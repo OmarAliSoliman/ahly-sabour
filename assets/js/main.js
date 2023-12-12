@@ -436,9 +436,14 @@ $(document).ready(function () {
   AOS.init();
 });
 
-var splach = gsap.timeline();
-splach.to(".splach_box", { bottom: "100%", stagger: .1 ,esae: "expo.out" })
-  // .to(".splach_box_bottom", { bottom: "100%", esae: "expo.out" }, "<")
+var splach = gsap.timeline({
+  onComplete(){
+    $(".splashoverlay").css('display', 'none');
+  }
+});
+splach.to(".splashoverlay .overlay_logo", {y: 10, opacity: 0 ,esae: "back.out(1.7)", display: "none"})
+splach.to(".splashoverlay .splach_box", { bottom: "100%", stagger: .1 ,esae: "expo.out", display: "none"})
+// .to(".splach_box_bottom", { bottom: "100%", esae: "expo.out" }, "<")
   splach.pause();
 function animateOut(){
   splach.play();
@@ -449,7 +454,7 @@ $(window).on("load", function () {
   var currentDir = $("body").css("direction");
   setTimeout(() => {
     animateOut();
-  }, 2000);
+  }, 1000);
   new Mmenu("#menu", {
     offCanvas: {
       slidingSubmenus: false,
