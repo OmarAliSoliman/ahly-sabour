@@ -208,19 +208,43 @@ body.modal-open .mm-slideout {
 
 .splashoverlay {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  // position: fixed;
+    // background-color:$fontColor;
+    // z-index: 9999;
+  justify-content: space-between;
 }
 
 .splashoverlay {
-  z-index: 9999;
-  background-color: $fontColor;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   overflow: hidden;
+  .splach_box{
+    position: fixed;
+    z-index: 9999;
+    width: 25%;
+    height: 100%;
+    background-color:$fontColor;;
+  }
+  .splach_box:first-child{
+    right: 0;
+  }
+  .splach_box:nth-child(2){
+    right: 25%;
+  }
+  .splach_box:nth-child(3){
+    left: 25%;
+  }
+  .splach_box:last-child{
+    left: 0;
+  }
+  // .splach_box_top{
+  //   right: 0;
+  //   background-color:$fontColor;;
+  //   top: 0;
+  // }
+  // .splach_box_bottom{
+  //   left: 0;
+  //   background-color:$fontColor;
+  //   bottom: 0;
+  // }
 }
 
 #counter {

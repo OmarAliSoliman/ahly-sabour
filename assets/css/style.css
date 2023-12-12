@@ -177,19 +177,30 @@ body.modal-open .mm-slideout {
 }
 .splashoverlay {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .splashoverlay {
-  z-index: 9999;
-  background-color: #252525;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   overflow: hidden;
+}
+.splashoverlay .splach_box {
+  position: fixed;
+  z-index: 9999;
+  width: 25%;
+  height: 100%;
+  background-color: #252525;
+}
+.splashoverlay .splach_box:first-child {
+  right: 0;
+}
+.splashoverlay .splach_box:nth-child(2) {
+  right: 25%;
+}
+.splashoverlay .splach_box:nth-child(3) {
+  left: 25%;
+}
+.splashoverlay .splach_box:last-child {
+  left: 0;
 }
 
 #counter {
