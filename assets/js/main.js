@@ -14,6 +14,7 @@ $(document).ready(function () {
       dots: false,
       speed: 300,
       infinite: false,
+      rtl: currentDir === "rtl" ? true : false,
       autoplaySpeed: 5000,
       autoplay: false,
       responsive: [
@@ -154,6 +155,7 @@ $(document).ready(function () {
       rows: 2,
       slidesPerRow: 3,
       dots: true,
+      rtl: currentDir === "rtl" ? true : false,
       arrows: true,
       responsive: [
         {
@@ -181,6 +183,7 @@ $(document).ready(function () {
       slidesToScroll: 3,
       arrows: true,
       dots: true,
+      rtl: currentDir === "rtl" ? true : false,
       speed: 300,
       infinite: true,
       autoplaySpeed: 5000,
@@ -213,6 +216,7 @@ $(document).ready(function () {
       slidesToScroll: 4,
       arrows: true,
       dots: true,
+      rtl: currentDir === "rtl" ? true : false,
       speed: 300,
       infinite: true,
       autoplaySpeed: 5000,
@@ -241,6 +245,7 @@ $(document).ready(function () {
     $(".project_img_slider").slick({
       dots: true,
       arrows: true,
+      rtl: currentDir === "rtl" ? true : false,
       responsive: [
         {
           breakpoint: 600,
@@ -437,15 +442,15 @@ $(document).ready(function () {
 });
 
 var splach = gsap.timeline({
-  onComplete(){
+  onComplete() {
     $(".splashoverlay").css('display', 'none');
   }
 });
-splach.to(".splashoverlay .overlay_logo", {y: 10, opacity: 0 ,esae: "back.out(1.7)", display: "none"})
-splach.to(".splashoverlay .splach_box", { bottom: "100%", stagger: .1 ,esae: "expo.out", display: "none"})
+splach.to(".splashoverlay .overlay_logo", { y: 10, opacity: 0, esae: "back.out(1.7)", display: "none" })
+splach.to(".splashoverlay .splach_box", { bottom: "100%", stagger: .1, esae: "expo.out", display: "none" })
 // .to(".splach_box_bottom", { bottom: "100%", esae: "expo.out" }, "<")
-  splach.pause();
-function animateOut(){
+splach.pause();
+function animateOut() {
   splach.play();
 }
 

@@ -3188,6 +3188,26 @@ body.modal-open .mm-slideout {
   .splashoverlay .splach_box {
     width: 26%;
   }
+  .our_legacy .our_legacy_wrapper .card_title{
+    margin-bottom: 50px;
+  }
+
+  .footer_contact .contact{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 10px;
+  }
+  .footer{
+    .middle_links{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .our_developments_project_card .dev_pro_btn{
+    margin-top: 20px;
+  } 
 }
 
 @media (max-height: 800px) {
