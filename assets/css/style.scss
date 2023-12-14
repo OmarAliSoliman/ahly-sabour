@@ -552,10 +552,12 @@ body.modal-open .mm-slideout {
     .card_title {
       color: #1b1b1b;
       font-family: $hemedium;
-      font-size: 2rem;
+     
       text-transform: uppercase;
       margin-bottom: 100px;
-
+      h5{
+        font-size: 2rem;
+      }
       span {
         font-family: $hebold;
       }

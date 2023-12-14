@@ -1,43 +1,16 @@
-/* Constant styles  */
-@font-face {
-  font-family: heregular;
-  src: url("../fonts/Helvetica Neue Regular.otf");
-}
-@font-face {
-  font-family: hemedium;
-  src: url("../fonts/HelveticaNeueMedium.ttf");
-}
-@font-face {
-  font-family: hebold;
-  src: url("../fonts/HelveticaNeueBold.ttf");
-}
-@font-face {
-  font-family: heblack;
-  src: url("../fonts/HelveticaNeueBold.ttf");
-}
-@font-face {
-  font-family: helight;
-  src: url("../fonts/HelveticaNeueLight.ttf");
-}
-@font-face {
-  font-family: helight2;
-  src: url("../fonts/HelveticaNeueLight.woff");
-}
-@font-face {
-  font-family: helight3;
-  src: url("../fonts/HelveticaNeueLight.woff2");
-}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-size: 16px;
   transition: all 0.4s ease-in;
-  font-family: hemedium;
+  font-family: 'Cairo', sans-serif;
   direction: rtl;
 }
 
 body {
-  font-family: hemedium;
+  font-family: 'Cairo', sans-serif;
   line-height: normal !important;
 }
 
@@ -250,7 +223,7 @@ body.modal-open .mm-slideout {
 }
 .custom_navbar .navbar_links .nav_item .nav_link {
   color: #000;
-  font-family: helight;
+  font-weight: 400;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -263,7 +236,7 @@ body.modal-open .mm-slideout {
 .custom_navbar .navbar_links .nice-select {
   float: none;
   border: 0;
-  font-family: helight;
+  font-weight: 400;
   padding-right: 0;
 }
 .custom_navbar .submenu_parent {
@@ -308,7 +281,7 @@ body.modal-open .mm-slideout {
   color: var(--primary-charcoal-grey, #1b1b1b);
   font-size: 15px;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   margin-bottom: 20px;
   display: block;
   text-align: center;
@@ -426,7 +399,7 @@ body.modal-open .mm-slideout {
   text-transform: uppercase;
 }
 .section_header h5 span {
-  font-family: helight;
+  font-weight: 300;
 }
 
 /* ================================================================ */
@@ -458,13 +431,18 @@ body.modal-open .mm-slideout {
 
 .our_legacy .our_legacy_wrapper .card_title {
   color: #1b1b1b;
-  font-family: hemedium;
+  font-weight: 500;
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 100px;
 }
+
+.our_legacy .our_legacy_wrapper .card_title h5{
+  font-size: 2rem;
+}
+
 .our_legacy .our_legacy_wrapper .card_title span {
-  font-family: hebold;
+  font-weight: 700;
 }
 .our_legacy .our_legacy_wrapper .card_text {
   margin-bottom: 100px;
@@ -474,7 +452,7 @@ body.modal-open .mm-slideout {
   font-size: 1.1rem;
   font-style: normal;
   font-weight: 500;
-  font-family: hemedium;
+  font-weight: 500;
   line-height: 34.5px;
 }
 .our_legacy .our_legacy_wrapper .card_link {
@@ -486,7 +464,7 @@ body.modal-open .mm-slideout {
   color: #2e55a4;
   font-size: 1.1rem;
   font-style: normal;
-  font-family: hemedium;
+  font-weight: 500;
   line-height: 36px;
 }
 .our_legacy .our_legacy_wrapper .card_link a img {
@@ -524,7 +502,7 @@ body.modal-open .mm-slideout {
   min-height: 75px;
 }
 .fact_number_card .number h5 {
-  font-family: hebold;
+  font-weight: 700;
   color: #1b1b1b;
   font-size: 2.3rem;
   margin: 0;
@@ -567,7 +545,7 @@ body.modal-open .mm-slideout {
   text-transform: uppercase;
 }
 .our_development .section_header h5 span {
-  font-family: hebold;
+  font-weight: 700;
 }
 .our_development .our_development_tabs .our_development_tabs_navs_wrap {
   justify-content: center;
@@ -585,7 +563,7 @@ body.modal-open .mm-slideout {
   min-width: max-content;
   font-size: 18px;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   line-height: 30px;
   letter-spacing: 0.81px;
   text-transform: uppercase;
@@ -612,7 +590,7 @@ body.modal-open .mm-slideout {
   text-transform: uppercase;
 }
 .our_development .tab-content .tab_header h5 span {
-  font-family: hebold;
+  font-weight: 700;
 }
 .our_development .projects_cards_slider .slick-list {
   margin: 0 -20px;
@@ -703,7 +681,7 @@ body.modal-open .mm-slideout {
   text-transform: uppercase;
 }
 .avilible_projects .section_header h5 span {
-  font-family: hebold;
+  font-weight: 700;
 }
 .avilible_projects .slick-list {
   margin: 0 -20px;
@@ -830,7 +808,7 @@ body.modal-open .mm-slideout {
   color: rgba(255, 255, 255, 0.6941176471);
   font-size: 18px;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
 }
 .custom_breadcrumb .path li::after {
   content: "\f105";
@@ -846,7 +824,7 @@ body.modal-open .mm-slideout {
 }
 .custom_breadcrumb .breadcrumb_title {
   color: #fff;
-  font-family: helight;
+  font-weight: 300;
   font-size: 2.5rem;
   margin: 0;
 }
@@ -870,7 +848,7 @@ body.modal-open .mm-slideout {
   text-transform: uppercase;
 }
 .ceo_messages .section_header h5 span {
-  font-family: helight;
+  font-weight: 300;
 }
 .ceo_messages .ceo_img {
   position: sticky;
@@ -883,7 +861,7 @@ body.modal-open .mm-slideout {
   color: rgba(27, 27, 27, 0.7);
   font-size: 1.2rem;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   font-weight: 400;
   line-height: 34.5px;
   /* 172.5% */
@@ -896,7 +874,7 @@ body.modal-open .mm-slideout {
 .ceo_messages .ceo_slogan p {
   color: rgba(27, 27, 27, 0.7);
   font-size: 1.5rem;
-  font-family: helight;
+  font-weight: 300;
   font-style: normal;
   line-height: 140.741%;
   text-transform: capitalize;
@@ -1028,7 +1006,7 @@ body.modal-open .mm-slideout {
   color: #bcbcbc;
   font-size: 1rem;
   margin-right: 10px;
-  font-family: helight;
+  font-weight: 300;
   transition: all 0.3s ease-in-out;
 }
 .time_line_vector .reload_btn button img {
@@ -1047,12 +1025,12 @@ body.modal-open .mm-slideout {
 }
 .our_legacy_content .content p {
   color: rgba(27, 27, 27, 0.7);
-  font-family: helight;
+  font-weight: 300;
   font-weight: 400;
   line-height: 172.5%;
 }
 .our_legacy_content .content p span {
-  font-family: heblack;
+  font-weight: 500;
 }
 
 .hr_line {
@@ -1072,12 +1050,12 @@ body.modal-open .mm-slideout {
 }
 .prand_forumla_purpose .card_text p {
   color: rgba(27, 27, 27, 0.7);
-  font-family: helight;
+  font-weight: 300;
   font-weight: 400;
   line-height: 172.5%;
 }
 .prand_forumla_purpose .card_text p span {
-  font-family: heblack;
+  font-weight: 500;
 }
 .prand_forumla_purpose .card_img {
   height: 550px;
@@ -1125,7 +1103,7 @@ body.modal-open .mm-slideout {
   margin: 0;
   color: #1b1b1b;
   font-size: 1.3rem;
-  font-family: helight;
+  font-weight: 300;
 }
 .achivment_card.last_card::after {
   display: none;
@@ -1143,7 +1121,7 @@ body.modal-open .mm-slideout {
 .brains_behind_ahly .section_header p {
   color: rgba(27, 27, 27, 0.7);
   font-size: 1.3rem;
-  font-family: helight;
+  font-weight: 300;
   margin-top: 24px;
 }
 .brains_behind_ahly .slick-list {
@@ -1223,7 +1201,7 @@ body.modal-open .mm-slideout {
   color: #787d82;
   font-size: 16px;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   line-height: normal;
 }
 
@@ -1280,7 +1258,7 @@ body.modal-open .mm-slideout {
   min-width: max-content;
   font-size: 18px;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   line-height: 30px;
   letter-spacing: 0.81px;
   text-transform: uppercase;
@@ -1378,7 +1356,7 @@ body.modal-open .mm-slideout {
 .our_developments_project_card .card_content .logo p {
   color: rgba(27, 27, 27, 0.7);
   font-size: 0.9rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
   margin-top: 12px;
 }
@@ -1388,7 +1366,7 @@ body.modal-open .mm-slideout {
 .our_developments_project_card .card_content .content p {
   color: rgba(27, 27, 27, 0.8);
   font-size: 1.3rem;
-  font-family: helight;
+  font-weight: 400;
   line-height: 135%;
   letter-spacing: -0.2px;
 }
@@ -1416,7 +1394,7 @@ body.modal-open .mm-slideout {
 .inner_page_header .inner_project_logo p {
   color: rgba(27, 27, 27, 0.7);
   font-size: 0.8rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
   margin-top: 10px;
 }
@@ -1432,7 +1410,7 @@ body.modal-open .mm-slideout {
 .inner_page_header .inner_page_description_content h6 {
   color: #2e55a4;
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
   margin-bottom: 10px;
 }
@@ -1448,7 +1426,7 @@ body.modal-open .mm-slideout {
 .inner_page_header .inner_page_description_btn p {
   color: rgba(27, 27, 27, 0.8);
   font-size: 1.1rem;
-  font-family: helight;
+  font-weight: 400;
   line-height: 155.556%;
   text-transform: capitalize;
 }
@@ -1483,7 +1461,7 @@ body.modal-open .mm-slideout {
   color: rgba(27, 27, 27, 0.7);
   font-size: 1rem;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
   margin-top: 20px;
 }
@@ -1505,7 +1483,7 @@ body.modal-open .mm-slideout {
 .amentie_card .card_text p {
   color: #1b1b1b;
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   line-height: 139.286%;
   width: 70%;
   margin: auto;
@@ -1524,7 +1502,7 @@ body.modal-open .mm-slideout {
 .project_location .section_header p {
   color: rgba(27, 27, 27, 0.7);
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
   margin-top: 32px;
 }
@@ -1547,7 +1525,7 @@ body.modal-open .mm-slideout {
 .project_location .map_information .location_info li span:first-child {
   color: #000;
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
 }
 .project_location .map_information .location_info li span:last-child {
@@ -1555,6 +1533,7 @@ body.modal-open .mm-slideout {
   font-size: 1rem;
   text-transform: capitalize;
   text-align: center;
+  font-weight: 700;
 }
 
 @keyframes aminitelogo {
@@ -1578,7 +1557,7 @@ body.modal-open .mm-slideout {
 .project_gallery .section_header p {
   color: rgba(27, 27, 27, 0.7);
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
   margin-top: 32px;
 }
@@ -1593,7 +1572,7 @@ body.modal-open .mm-slideout {
   min-width: max-content;
   font-size: 18px;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   line-height: 30px;
   letter-spacing: 0.81px;
   text-transform: uppercase;
@@ -1672,14 +1651,14 @@ body.modal-open .mm-slideout {
   color: #fff;
   font-size: 2.4rem;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   letter-spacing: 1.8px;
   text-transform: uppercase;
 }
 .construction_update_card .card_img .card_content h5 {
   color: #fff;
   font-size: 2.6rem;
-  font-family: heblack;
+  font-weight: 500;
   letter-spacing: 2.25px;
   text-transform: uppercase;
 }
@@ -1695,7 +1674,7 @@ body.modal-open .mm-slideout {
 .other_successful_projects .section_header p {
   color: rgba(27, 27, 27, 0.7);
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
   margin-top: 32px;
 }
@@ -1735,7 +1714,7 @@ body.modal-open .mm-slideout {
 .contact_us_section .contact_us_contnet .section_header p {
   color: #000;
   font-size: 1.1rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: capitalize;
 }
 .contact_us_section .contact_us_contnet .content {
@@ -1761,7 +1740,7 @@ body.modal-open .mm-slideout {
 .form_style label {
   color: #1b1b1b;
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   margin-bottom: 12px;
 }
 .form_style .form-control {
@@ -1769,7 +1748,7 @@ body.modal-open .mm-slideout {
   border: 1px solid rgba(37, 37, 37, 0.202);
   height: 56px;
   background-color: transparent;
-  font-family: helight;
+  font-weight: 300;
   text-align: right !important;
 }
 
@@ -1811,7 +1790,7 @@ body.modal-open .mm-slideout {
   border-radius: 0;
   background: #2e55a4;
   border: 1px solid #2e55a4;
-  font-family: helight;
+  font-weight: 300;
 }
 .form_style .btn_submit .btn_style:hover {
   background-color: #fff;
@@ -2082,7 +2061,7 @@ body.modal-open .mm-slideout {
 .page_under_construction .page_under_construction_wrap h5 {
   color: #1b1b1b;
   font-size: 2.5rem;
-  font-family: hebold;
+  font-weight: 700;
   margin-bottom: 32px;
 }
 .page_under_construction .page_under_construction_wrap p {
@@ -2110,7 +2089,7 @@ body.modal-open .mm-slideout {
 .page_under_construction .page_under_construction_wrap a span {
   color: #fff;
   font-size: 1.1rem;
-  font-family: hebold;
+  font-weight: 700;
   margin-right: 12px;
   transition: all 0.3s ease-in-out;
 }
@@ -2171,20 +2150,20 @@ body.modal-open .mm-slideout {
 .footer .footer_top_world h5 {
   color: #fff;
   font-size: 1.4rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: uppercase;
 }
 .footer .footer_top_world h5 span {
-  font-family: hebold;
+  font-weight: 700;
 }
 .footer .footer_top_world p {
   color: #fff;
   font-size: 1rem;
-  font-family: helight;
+  font-weight: 300;
   text-transform: uppercase;
 }
 .footer .footer_top_world p span {
-  font-family: hebold;
+  font-weight: 700;
 }
 .footer .footer_links {
   margin-top: 80px;
@@ -2208,7 +2187,7 @@ body.modal-open .mm-slideout {
 .footer .footer_links .links h5 {
   color: #fff;
   font-size: 1rem;
-  font-family: hebold;
+  font-weight: 700;
   line-height: 166.667%;
   text-transform: uppercase;
   margin-bottom: 35px;
@@ -2217,7 +2196,7 @@ body.modal-open .mm-slideout {
   color: #fff;
   font-size: 1rem;
   font-style: normal;
-  font-family: helight;
+  font-weight: 300;
   line-height: 187.5%;
   margin-bottom: 14px;
   display: inline-block;

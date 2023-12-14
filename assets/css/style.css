@@ -445,9 +445,11 @@ body.modal-open .mm-slideout {
 .our_legacy .our_legacy_wrapper .card_title {
   color: #1b1b1b;
   font-family: hemedium;
-  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 100px;
+}
+.our_legacy .our_legacy_wrapper .card_title h5 {
+  font-size: 2rem;
 }
 .our_legacy .our_legacy_wrapper .card_title span {
   font-family: hebold;
