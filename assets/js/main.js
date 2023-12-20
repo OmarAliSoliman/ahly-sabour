@@ -467,7 +467,7 @@ $(window).on("load", function () {
     },
     theme: "light",
     counters: {
-      add: true,
+      add: false,
     },
   });
 });

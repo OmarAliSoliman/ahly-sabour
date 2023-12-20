@@ -165,6 +165,7 @@ p {
 
   h5 {
     font-size: 2rem;
+    text-transform: capitalize;
     // font-family: bills;
   }
 }
@@ -513,11 +514,11 @@ body.modal-open .mm-slideout {
 
   h5 {
     color: #1b1b1b;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-style: normal;
     // font-family: $helight;
     letter-spacing: 1.6px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
     span {
       font-family: $helight;
@@ -556,7 +557,8 @@ body.modal-open .mm-slideout {
       text-transform: uppercase;
       margin-bottom: 100px;
       h5{
-        font-size: 2rem;
+        font-size: 2.5rem;
+        text-transform: capitalize;
       }
       span {
         font-family: $hebold;
@@ -677,7 +679,7 @@ body.modal-open .mm-slideout {
       color: #1b1b1b;
       font-size: 2.5rem;
       letter-spacing: 1.6px;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       span {
         font-family: $hebold;
@@ -730,12 +732,12 @@ body.modal-open .mm-slideout {
       margin-bottom: 32px;
 
       h5 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         // font-family: 300;
         line-height: 30px;
         /* 100% */
         letter-spacing: 1.2px;
-        text-transform: uppercase;
+        text-transform: capitalize;
 
         span {
           font-family: $hebold;
@@ -845,12 +847,12 @@ body.modal-open .mm-slideout {
     margin-bottom: 30px;
 
     h5 {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       // font-family: 300;
       line-height: 30px;
       /* 100% */
       letter-spacing: 1.2px;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       span {
         font-family: $hebold;
@@ -1054,11 +1056,11 @@ body.modal-open .mm-slideout {
 
     h5 {
       color: #1b1b1b;
-      font-size: 2.3rem;
+      font-size: 2.5rem;
       font-style: normal;
       // font-family: $helight;
       letter-spacing: 1.6px;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       span {
         font-family: $helight;
@@ -1337,7 +1339,7 @@ body.modal-open .mm-slideout {
     margin-bottom: 115px;
 
     h5 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       text-transform: capitalize;
     }
   }
@@ -2613,6 +2615,23 @@ body.modal-open .mm-slideout {
   bottom: 20px;
   left: 20px;
   z-index: 5;
+  
+  .request_tooltip{
+    background-color: #eeeeee;
+    color: #000;
+    padding: 17px;
+    display: inline-block;
+    top: 50%;
+    left: 97%;
+    transform: translate(-100px, -50%);
+    position: absolute;
+    width: max-content;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    a{
+      color: #000;
+    }
+  }
 
   .pulsingButton {
     text-align: center;
@@ -2648,6 +2667,10 @@ body.modal-open .mm-slideout {
     color: #ffffff;
   }
 
+  &:hover{
+
+  }
+
   @-webkit-keyframes pulsing {
     to {
       box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
@@ -2669,6 +2692,12 @@ body.modal-open .mm-slideout {
   @keyframes pulsing {
     to {
       box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+  }
+  &:hover{
+    .request_tooltip{
+      opacity: 1 !important;
+      transform: translate(0, -50%);
     }
   }
 }

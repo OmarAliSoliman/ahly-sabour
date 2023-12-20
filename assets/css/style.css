@@ -141,6 +141,7 @@ p {
 }
 .section_header h5 {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 body.modal-open {
@@ -411,10 +412,10 @@ body.modal-open .mm-slideout {
 }
 .section_header h5 {
   color: #1b1b1b;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   font-style: normal;
   letter-spacing: 1.6px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .section_header h5 span {
   font-family: helight;
@@ -449,7 +450,8 @@ body.modal-open .mm-slideout {
   margin-bottom: 100px;
 }
 .our_legacy .our_legacy_wrapper .card_title h5 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
 }
 .our_legacy .our_legacy_wrapper .card_title span {
   font-family: hebold;
@@ -551,7 +553,7 @@ body.modal-open .mm-slideout {
   color: #1b1b1b;
   font-size: 2.5rem;
   letter-spacing: 1.6px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .our_development .section_header h5 span {
   font-family: hebold;
@@ -592,11 +594,11 @@ body.modal-open .mm-slideout {
   margin-bottom: 32px;
 }
 .our_development .tab-content .tab_header h5 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   line-height: 30px;
   /* 100% */
   letter-spacing: 1.2px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .our_development .tab-content .tab_header h5 span {
   font-family: hebold;
@@ -678,11 +680,11 @@ body.modal-open .mm-slideout {
   margin-bottom: 30px;
 }
 .avilible_projects .section_header h5 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   line-height: 30px;
   /* 100% */
   letter-spacing: 1.2px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .avilible_projects .section_header h5 span {
   font-family: hebold;
@@ -841,10 +843,10 @@ body.modal-open .mm-slideout {
 }
 .ceo_messages .section_header h5 {
   color: #1b1b1b;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   font-style: normal;
   letter-spacing: 1.6px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .ceo_messages .section_header h5 span {
   font-family: helight;
@@ -1068,7 +1070,7 @@ body.modal-open .mm-slideout {
   margin-bottom: 115px;
 }
 .our_achievements .section_header h5 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: capitalize;
 }
 
@@ -2089,6 +2091,23 @@ body.modal-open .mm-slideout {
   left: 20px;
   z-index: 5;
 }
+.floating_btn .request_tooltip {
+  background-color: #eeeeee;
+  color: #000;
+  padding: 17px;
+  display: inline-block;
+  top: 50%;
+  left: 97%;
+  transform: translate(-100px, -50%);
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.floating_btn .request_tooltip a {
+  color: #000;
+}
 .floating_btn .pulsingButton {
   text-align: center;
   white-space: nowrap;
@@ -2117,6 +2136,10 @@ body.modal-open .mm-slideout {
   to {
     box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
   }
+}
+.floating_btn:hover .request_tooltip {
+  opacity: 1 !important;
+  transform: translate(0, -50%);
 }
 
 /* ================================================================ */
