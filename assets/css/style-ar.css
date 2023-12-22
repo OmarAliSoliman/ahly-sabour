@@ -1262,7 +1262,7 @@ body.modal-open .mm-slideout {
   border-radius: 60px;
 }
 .our_portofilio .download_btn a span {
-  margin-left: 16px;
+  margin-right: 16px;
 }
 .our_portofilio .download_btn a:hover {
   background-color: rgba(46, 85, 164, 0.9);
@@ -2416,6 +2416,26 @@ body.modal-open .mm-slideout {
     height: 50vh;
   }
 }
+
+@media (max-width: 750px) {
+  .our_portofilio .section_header h5 {
+    margin-left: 0 !important;
+  }
+  .our_portofilio .download_btn {
+    margin-right: 0 !important;
+  }
+  .our_portofilio .content,
+  .our_portofilio .download_btn {
+    justify-content: center !important;
+  }
+  .our_portofilio .download_btn {
+    margin-top: 20px;
+  }
+  .our_portofilio .download_btn a {
+    margin: auto !important;
+  }
+}
+
 @media (max-width: 600px) {
   .our_legacy .our_legacy_wrapper {
     padding: 20px;
