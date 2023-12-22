@@ -141,7 +141,7 @@ p {
 }
 .section_header h5 {
   font-size: 2rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 body.modal-open {
@@ -427,7 +427,7 @@ body.modal-open .mm-slideout {
   font-size: 2.5rem;
   font-style: normal;
   letter-spacing: 1.6px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 .section_header h5 span {
   font-family: helight;
@@ -969,7 +969,7 @@ body.modal-open .mm-slideout {
 }
 .time_line_vector .single_time_line .logo_line_wrap {
   position: absolute;
-  bottom: 0;
+  bottom: 11px;
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -1007,7 +1007,7 @@ body.modal-open .mm-slideout {
   transform: translate(0, -50%);
 }
 .time_line_vector .opsite_single_time_line .logo_line_wrap {
-  top: 0;
+  top: 11px;
   bottom: unset;
 }
 .time_line_vector .opsite_single_time_line .logo_line .line_dot {
@@ -1327,6 +1327,10 @@ body.modal-open .mm-slideout {
 }
 .our_dev_projects_slider .slick-list {
   margin: 0 -20px;
+}
+.our_dev_projects_slider .section_header h5 {
+  font-size: 1.8rem;
+  font-family: hemedium;
 }
 
 .our_developments_project_cards {
@@ -2151,7 +2155,7 @@ body.modal-open .mm-slideout {
   display: flex;
   align-items: center;
   padding-left: 65px;
-  transform: translate(-50px, -50%);
+  transform: translate(-10px, -50%);
   position: absolute;
   width: -moz-max-content;
   width: max-content;
@@ -2162,7 +2166,7 @@ body.modal-open .mm-slideout {
 .floating_btn .request_tooltip a {
   color: #000;
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   height: 100%;

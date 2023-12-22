@@ -165,7 +165,7 @@ p {
 
   h5 {
     font-size: 2rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     // font-family: bills;
   }
 }
@@ -527,7 +527,7 @@ body.modal-open .mm-slideout {
     font-style: normal;
     // font-family: $helight;
     letter-spacing: 1.6px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 
     span {
       font-family: $helight;
@@ -1203,7 +1203,7 @@ body.modal-open .mm-slideout {
 
     .logo_line_wrap {
       position: absolute;
-      bottom: 0;
+      bottom: 11px;
       left: 50%;
       transform: translate(-50%, 0%);
     }
@@ -1249,7 +1249,7 @@ body.modal-open .mm-slideout {
 
   .opsite_single_time_line {
     .logo_line_wrap {
-      top: 0;
+      top: 11px;
       bottom: unset;
     }
 
@@ -1639,6 +1639,12 @@ body.modal-open .mm-slideout {
 
   .slick-list {
     margin: 0 -20px;
+  }
+  .section_header{
+    h5{
+      font-size: 1.8rem;
+      font-family: $hemedium;
+    }
   }
 }
 
@@ -2669,7 +2675,7 @@ body.modal-open .mm-slideout {
     align-items: center;
     padding-left: 65px;
     // left: 97%;
-    transform: translate(-50px, -50%);
+    transform: translate(-10px, -50%);
     position: absolute;
     width: max-content;
     transition: all 0.3s ease-in-out;
@@ -2678,7 +2684,7 @@ body.modal-open .mm-slideout {
     a {
       color: #000;
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       display: flex;
       align-items: center;
       height: 100%;
