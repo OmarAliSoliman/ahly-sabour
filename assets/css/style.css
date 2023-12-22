@@ -195,7 +195,7 @@ body.modal-open .mm-slideout {
   position: fixed;
   width: 25%;
   height: 100%;
-  background-color: #252525;
+  background-color: #fff;
 }
 .splashoverlay .splach_box.first_box {
   right: 0;
@@ -229,6 +229,18 @@ body.modal-open .mm-slideout {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 4;
+}
+.splashoverlay .overlay_logo img {
+  width: 150px;
+}
+.splashoverlay .loding_gif {
+  text-align: center;
+  width: 80px;
+  margin: 15px auto;
+}
+.splashoverlay .loding_gif video {
+  margin: auto;
+  width: 100%;
 }
 
 /* ================================================================ */

@@ -458,7 +458,7 @@ function animateOut() {
 $(window).on("load", function () {
   var currentDir = $("body").css("direction");
   setTimeout(() => {
-    animateOut();
+    // animateOut();
   }, 1000);
   new Mmenu("#menu", {
     offCanvas: {

@@ -231,7 +231,7 @@ body.modal-open .mm-slideout {
     position: fixed;
     width: 25%;
     height: 100%;
-    background-color: $fontColor;
+    background-color: #fff;
   }
 
   .splach_box.first_box {
@@ -283,6 +283,18 @@ body.modal-open .mm-slideout {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4;
+    img{
+    width: 150px;
+    }
+  }
+  .loding_gif{
+    text-align: center;
+    width: 80px;
+    margin: 15px auto;
+    video{
+      margin: auto;
+      width: 100%;
+    }
   }
 }
 
