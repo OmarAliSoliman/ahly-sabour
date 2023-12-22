@@ -232,7 +232,6 @@ body.modal-open .mm-slideout {
     width: 25%;
     height: 100%;
     background-color: $fontColor;
-    ;
   }
 
   .splach_box.first_box {
@@ -287,8 +286,6 @@ body.modal-open .mm-slideout {
   }
 }
 
-
-
 /* ================================================================ */
 .custom_navbar {
   background: #fff;
@@ -340,7 +337,7 @@ body.modal-open .mm-slideout {
     cursor: pointer;
     z-index: 3;
 
-    >a {
+    > a {
       pointer-events: none;
       cursor: pointer;
     }
@@ -421,7 +418,7 @@ body.modal-open .mm-slideout {
     }
 
     &:hover {
-      >.nav_link {
+      > .nav_link {
         cursor: pointer;
 
         span {
@@ -429,13 +426,13 @@ body.modal-open .mm-slideout {
         }
       }
 
-      >.submenu_arrow {
+      > .submenu_arrow {
         opacity: 1 !important;
         visibility: visible !important;
         transform: translateY(0px) !important;
       }
 
-      >.submenu {
+      > .submenu {
         opacity: 1 !important;
         visibility: visible !important;
         transform: translateY(0px) !important;
@@ -552,16 +549,16 @@ body.modal-open .mm-slideout {
 
     .card_title {
       color: #1b1b1b;
-      font-family: $hemedium;
-     
+      font-family: $helight;
+
       text-transform: uppercase;
       margin-bottom: 100px;
-      h5{
+      h5 {
         font-size: 2.5rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
       }
       span {
-        font-family: $hebold;
+        font-family: $hemedium;
       }
     }
 
@@ -572,7 +569,7 @@ body.modal-open .mm-slideout {
         color: rgba(28, 28, 28, 0.8);
         font-size: 1.1rem;
         font-style: normal;
-        font-weight: 500;
+        // font-weight: 500;
         font-family: $hemedium;
         line-height: 34.5px;
       }
@@ -625,12 +622,14 @@ body.modal-open .mm-slideout {
 .fact_number_card {
   padding: 37px 55px;
   position: relative;
-  min-height: 230px;
-
+  min-height: 300px;
+  text-align: center;
+  .card_icon {
+    min-height: 70px;
+  }
   .number {
-    margin-bottom: 32px;
-    min-height: 75px;
-
+    margin-bottom: 20px;
+    margin-top: 30px;
     h5 {
       font-family: $hebold;
       color: #1b1b1b;
@@ -641,7 +640,8 @@ body.modal-open .mm-slideout {
     .smallspan {
       margin: 0;
       color: #1b1b1b;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      font-family: $helight;
     }
   }
 
@@ -650,7 +650,7 @@ body.modal-open .mm-slideout {
       color: rgba(#1b1b1b, 0.7);
       font-size: 1.1rem;
       font-style: normal;
-      font-weight: 400;
+      font-family: $helight;
       line-height: 25px;
     }
   }
@@ -668,18 +668,26 @@ body.modal-open .mm-slideout {
   }
 }
 
+.custom_fact_number_card {
+  .number {
+    margin-bottom: 20px;
+    min-height: 20px !important;
+    margin-top: 30px;
+  }
+}
+
 .our_development {
   margin-bottom: 90px;
 
   .section_header {
     margin-bottom: 70px;
     text-align: center;
-
+    font-family: $helight;
     h5 {
       color: #1b1b1b;
       font-size: 2.5rem;
       letter-spacing: 1.6px;
-      text-transform: capitalize;
+      text-transform: uppercase;
 
       span {
         font-family: $hebold;
@@ -730,17 +738,17 @@ body.modal-open .mm-slideout {
 
     .tab_header {
       margin-bottom: 32px;
-
+      font-family: $helight;
       h5 {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
         // font-family: 300;
         line-height: 30px;
         /* 100% */
         letter-spacing: 1.2px;
-        text-transform: capitalize;
+        text-transform: uppercase;
 
         span {
-          font-family: $hebold;
+          font-family: $hemedium;
         }
       }
     }
@@ -845,17 +853,17 @@ body.modal-open .mm-slideout {
 
   .section_header {
     margin-bottom: 30px;
-
+    font-family: $helight;
     h5 {
-      font-size: 2.5rem;
+      font-size: 1.9rem;
       // font-family: 300;
       line-height: 30px;
       /* 100% */
       letter-spacing: 1.2px;
-      text-transform: capitalize;
+      text-transform: uppercase;
 
       span {
-        font-family: $hebold;
+        font-family: $hemedium;
       }
     }
   }
@@ -1053,14 +1061,14 @@ body.modal-open .mm-slideout {
 
   .section_header {
     margin-bottom: 40px;
-
+    font-family: $hemedium;
     h5 {
       color: #1b1b1b;
       font-size: 2.5rem;
       font-style: normal;
       // font-family: $helight;
       letter-spacing: 1.6px;
-      text-transform: capitalize;
+      text-transform: uppercase;
 
       span {
         font-family: $helight;
@@ -1120,8 +1128,14 @@ body.modal-open .mm-slideout {
   }
 }
 
-.time_line {
+.time_line_wraper {
   margin-top: 75px;
+  .section_header {
+    h5 {
+      font-family: $hemedium;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .time_line_vector {
@@ -1282,7 +1296,12 @@ body.modal-open .mm-slideout {
 
 .our_legacy_content {
   margin-top: 200px;
-
+  .section_header {
+    h5 {
+      font-family: $hemedium;
+      text-transform: uppercase;
+    }
+  }
   .content {
     p {
       color: rgba(#1b1b1b, 0.7);
@@ -1311,6 +1330,10 @@ body.modal-open .mm-slideout {
 
   .section_header {
     margin-bottom: 32px;
+    h5 {
+      font-family: $hemedium;
+      text-transform: uppercase;
+    }
   }
 
   .card_text {
@@ -1337,10 +1360,10 @@ body.modal-open .mm-slideout {
   .section_header {
     text-align: center;
     margin-bottom: 115px;
-
     h5 {
+      font-family: $hemedium;
+      text-transform: uppercase;
       font-size: 2.5rem;
-      text-transform: capitalize;
     }
   }
 }
@@ -1378,7 +1401,7 @@ body.modal-open .mm-slideout {
   .card_text {
     p {
       margin: 0;
-      color: #1b1b1b;
+      color: rgba(#1b1b1b, 0.7);
       font-size: 1.3rem;
       font-family: $helight;
     }
@@ -1399,7 +1422,8 @@ body.modal-open .mm-slideout {
 
     // margin-bottom: 150px;
     h5 {
-      text-transform: capitalize;
+      text-transform: uppercase;
+      font-family: $hemedium;
     }
 
     p {
@@ -1516,7 +1540,9 @@ body.modal-open .mm-slideout {
 
 .our_portofilio {
   margin: 100px 0;
-
+  .section_header {
+    margin-top: 0;
+  }
   .content {
     h6 {
       color: #1b1b1b;
@@ -1531,21 +1557,24 @@ body.modal-open .mm-slideout {
     h5 {
       margin: 0;
       text-transform: capitalize;
+      margin-right: 50px;
     }
   }
 
   .download_btn {
+    text-align: right;
+    margin-left: 50px;
     a {
       display: flex;
-      padding: 20px 24px;
+      padding: 16px 24px;
       justify-content: center;
       align-items: center;
       background: #2e55a4;
       border: 1px solid #2e55a4;
       width: fit-content;
       color: #fff;
-      margin-left: auto;
-
+      margin-right: auto;
+      border-radius: 60px;
       span {
         margin-left: 16px;
       }
@@ -1677,15 +1706,14 @@ body.modal-open .mm-slideout {
       padding: 24px;
       justify-content: center;
       align-items: center;
-      border: 1px solid var(--primary-charcoal-grey, #1b1b1b);
-      color: #1b1b1b;
+      border: 1px solid #2e55a4;
+      color: #fff;
       font-size: 1.1rem;
       margin: auto;
-
+      background-color: #2e55a4;
       &:hover {
-        background-color: #2e55a4;
-        border-color: #2e55a4;
-        color: #fff;
+        background-color: #fff;
+        color: #1b1b1b;
       }
     }
   }
@@ -2010,7 +2038,6 @@ body.modal-open .mm-slideout {
     }
 
     .gallery_cards_slider {
-
       // margin-bottom: 90px;
       .slick-list {
         margin: 0 -12px;
@@ -2057,7 +2084,6 @@ body.modal-open .mm-slideout {
 
 .construction_update {
   .construction_update_slider {
-
     // margin-bottom: 90px;
     .slick-next {
       bottom: -60px;
@@ -2186,7 +2212,8 @@ body.modal-open .mm-slideout {
     }
   }
 
-  .contact_us_form {}
+  .contact_us_form {
+  }
 }
 
 .form_style {
@@ -2338,7 +2365,7 @@ body.modal-open .mm-slideout {
 
       a {
         color: #2e55a4;
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-decoration-line: underline;
       }
     }
@@ -2457,7 +2484,8 @@ body.modal-open .mm-slideout {
   margin: auto;
   max-width: 100%;
 
-  .project_card_img {}
+  .project_card_img {
+  }
 
   .card_img {
     height: 798px;
@@ -2513,7 +2541,8 @@ body.modal-open .mm-slideout {
     transform: translateY(200px);
     transition: all 0.3s ease-in-out;
 
-    .project_card_img {}
+    .project_card_img {
+    }
 
     .card_img {
       height: 798px;
@@ -2615,21 +2644,33 @@ body.modal-open .mm-slideout {
   bottom: 20px;
   left: 20px;
   z-index: 5;
-  
-  .request_tooltip{
-    background-color: #eeeeee;
+
+  .request_tooltip {
+    background: #fff;
     color: #000;
-    padding: 17px;
+    padding: 10px 45px;
     display: inline-block;
     top: 50%;
-    left: 97%;
-    transform: translate(-100px, -50%);
+    left: 50%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 65px;
+    // left: 97%;
+    transform: translate(-50px, -50%);
     position: absolute;
     width: max-content;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
     opacity: 0;
-    a{
+    a {
       color: #000;
+      display: block;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
     }
   }
 
@@ -2657,6 +2698,8 @@ body.modal-open .mm-slideout {
     text-decoration: none !important;
     color: #ffffff;
     transition: all 300ms ease-in-out;
+    z-index: 3;
+    position: relative;
   }
 
   a.pulsingButton:hover {
@@ -2667,8 +2710,7 @@ body.modal-open .mm-slideout {
     color: #ffffff;
   }
 
-  &:hover{
-
+  &:hover {
   }
 
   @-webkit-keyframes pulsing {
@@ -2694,13 +2736,41 @@ body.modal-open .mm-slideout {
       box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
     }
   }
-  &:hover{
-    .request_tooltip{
-      opacity: 1 !important;
-      transform: translate(0, -50%);
+  &:hover {
+    .request_tooltip {
+    transform: translate(0px, -50%) !important;
+    opacity: 1 !important;
+      // animation: widthgrow 400ms 300ms forwards;
+      a {
+        // animation: textShow 500ms 400ms forwards;
+      }
     }
   }
 }
+
+// @keyframes widthgrow {
+//   0% {
+//     width: 0;
+//     opacity: 0;
+//   }
+
+//   100% {
+//     width: max-content ;
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes textShow {
+//   0% {
+//     transform: translateX(-20px);
+//     opacity: 0;
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
 
 /* ================================================================ */
 
@@ -2879,7 +2949,7 @@ body.modal-open .mm-slideout {
     .navbar_links {
       display: none;
     }
-    .row{
+    .row {
       align-items: center !important;
     }
   }
@@ -2902,7 +2972,6 @@ body.modal-open .mm-slideout {
       margin-top: 112px;
     }
   }
-  
 }
 
 @media (max-width: 991px) {
@@ -2972,6 +3041,27 @@ body.modal-open .mm-slideout {
 
   .home_header .card_img {
     height: 50vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .section_header h5 {
+    margin-right: 0 !important;
+  }
+  .our_portofilio .download_btn {
+    margin-left: 0 !important;
+  }
+  .our_portofilio {
+    .content,
+    .download_btn {
+      justify-content: center !important;
+    }
+    .download_btn {
+      margin-top: 20px;
+      a {
+        margin: auto !important;
+      }
+    }
   }
 }
 
@@ -3219,35 +3309,40 @@ body.modal-open .mm-slideout {
   .splashoverlay .splach_box {
     width: 26%;
   }
-  .our_legacy .our_legacy_wrapper .card_title{
+  .our_legacy .our_legacy_wrapper .card_title {
     margin-bottom: 50px;
   }
 
-  .footer_contact .contact{
+  .footer_contact .contact {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 10px;
   }
-  .footer{
-    .middle_links{
-      &::after{
+  .footer {
+    .middle_links {
+      &::after {
         display: none;
       }
     }
   }
-  .our_developments_project_card .dev_pro_btn{
+  .our_developments_project_card .dev_pro_btn {
     margin-top: 20px;
-  } 
+  }
+  .floating_btn{
+    .request_tooltip{
+      display: none;
+    }
+  }
 }
 
 @media (max-height: 800px) {
-
   .gallery_modal_wrapper,
   .master_plan_modal .master_plan_modal_wrapper {
     height: 600px;
 
-    .project_card_img {}
+    .project_card_img {
+    }
 
     .card_img {
       height: 600px;

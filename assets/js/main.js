@@ -50,7 +50,7 @@ $(document).ready(function () {
 
   if ($(".avilible_projects_cards_slider").length) {
     $(".avilible_projects_cards_slider").slick({
-      slidesToShow: 5.7,
+      slidesToShow: 5.8,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
@@ -73,7 +73,7 @@ $(document).ready(function () {
           },
         },
         {
-          breakpoint: 1450,
+          breakpoint: 1150,
           settings: {
             slidesToShow: 3.3,
             // centerMode: false,
@@ -82,7 +82,7 @@ $(document).ready(function () {
         {
           breakpoint: 1100,
           settings: {
-            slidesToShow: 2.7,
+            slidesToShow: 1.7,
             // centerMode: false,
           },
         },
