@@ -283,15 +283,15 @@ body.modal-open .mm-slideout {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4;
-    img{
-    width: 150px;
+    img {
+      width: 150px;
     }
   }
-  .loding_gif{
+  .loding_gif {
     text-align: center;
     width: 80px;
     margin: 15px auto;
-    video{
+    video {
       margin: auto;
       width: 100%;
     }
@@ -943,7 +943,7 @@ body.modal-open .mm-slideout {
 
 .avilible_projects_card {
   // width: 422px;
-  margin: 0 20px;
+  // margin: 0 20px;
 
   .card_img {
     height: 550px;
@@ -1008,6 +1008,136 @@ body.modal-open .mm-slideout {
         span {
           margin-right: 15px;
         }
+      }
+    }
+  }
+}
+
+.swiper_avilible_projects {
+  .swiper-slide {
+    padding-top: 60px;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    &.swiper-slide-active {
+      opacity: 1;
+      transform: translateY(-50px);
+    }
+    &.swiper-slide-prev {
+      opacity: 1;
+    }
+    &.swiper-slide-next {
+      opacity: 1;
+    }
+  }
+
+  .swiper-button-prev {
+    top: 40px;
+  }
+  .swiper-button-next {
+    top: 40px;
+  }
+
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    background-image: url("../images/arrowline.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    transform: rotate(180deg);
+    right: 340px;
+    left: unset;
+  }
+
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    background-image: url("../images/arrowline.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    right: 300px;
+    display: block;
+  }
+}
+
+@media (max-width: 1920px) {
+  .swiper_avilible_projects .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 100px;
+  }
+
+  .swiper_avilible_projects .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    right: 140px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .swiper_avilible_projects .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 70px;
+  }
+
+  .swiper_avilible_projects .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    right: 110px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper_avilible_projects .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 50px;
+  }
+
+  .swiper_avilible_projects .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    right: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper_avilible_projects {
+    .swiper-slide {
+      padding-bottom: 60px;
+    }
+  }
+  .swiper_avilible_projects .swiper-button-next {
+    top: unset;
+    bottom: 0px;
+  }
+
+  .swiper_avilible_projects .swiper-button-prev {
+    top: unset;
+    bottom: 0px;
+  }
+  .swiper_avilible_projects .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 30px;
+  }
+  .swiper_avilible_projects .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    right: unset;
+    left: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .swiper_avilible_projects {
+    .swiper-slide {
+      &.swiper-slide-active {
+        opacity: 1;
+        transform: translateY(-50px);
+      }
+      &.swiper-slide-prev {
+        opacity: 0.5;
+      }
+      &.swiper-slide-next {
+        opacity: 0.5;
       }
     }
   }
@@ -1640,8 +1770,8 @@ body.modal-open .mm-slideout {
   .slick-list {
     margin: 0 -20px;
   }
-  .section_header{
-    h5{
+  .section_header {
+    h5 {
       font-size: 1.8rem;
       font-family: $hemedium;
     }
@@ -2756,8 +2886,8 @@ body.modal-open .mm-slideout {
   }
   &:hover {
     .request_tooltip {
-    transform: translate(0px, -50%) !important;
-    opacity: 1 !important;
+      transform: translate(0px, -50%) !important;
+      opacity: 1 !important;
       // animation: widthgrow 400ms 300ms forwards;
       a {
         // animation: textShow 500ms 400ms forwards;
@@ -3347,8 +3477,8 @@ body.modal-open .mm-slideout {
   .our_developments_project_card .dev_pro_btn {
     margin-top: 20px;
   }
-  .floating_btn{
-    .request_tooltip{
+  .floating_btn {
+    .request_tooltip {
       display: none;
     }
   }

@@ -50,12 +50,13 @@ $(document).ready(function () {
 
   if ($(".avilible_projects_cards_slider").length) {
     $(".avilible_projects_cards_slider").slick({
-      slidesToShow: 3.7,
-      slidesToScroll: 5,
+      slidesToShow: 2.7,
+      slidesToScroll: 1,
       arrows: true,
       dots: false,
       speed: 300,
       infinite: true,
+      loop: true,
       autoplaySpeed: 5000,
       centerMode: true,
       autoplay: true,
@@ -69,13 +70,13 @@ $(document).ready(function () {
         {
           breakpoint: 2400,
           settings: {
-            slidesToShow: 3.7,
+            slidesToShow: 2.7,
           },
         },
         {
           breakpoint: 1800,
           settings: {
-            slidesToShow: 3.7,
+            slidesToShow: 2.7,
           },
         },
         {
@@ -110,6 +111,38 @@ $(document).ready(function () {
       ],
     });
   }
+
+  var $swiper = $(".swiper_avilible_projects");
+  var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
+  // into a fixed position for animation purposes
+  var $bottomSlideContent = null; // Slide content that gets passed between the
+  // panning slide stack and the position 'behind'
+  // the stack, needed for correct animation style
+
+  var mySwiper = new Swiper(".swiper-container", {
+    spaceBetween: 24,
+    slidesPerView: 3.5,
+    centeredSlides: true,
+    roundLengths: true,
+    loop: true,
+    loopAdditionalSlides: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      // when window width is >= 600px
+      600: {
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+      },
+      // when window width is >= 991px
+      991: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
 
   if ($(".brains_slider").length) {
     $(".brains_slider").slick({
@@ -371,95 +404,101 @@ $(document).ready(function () {
       }, 3000);
     });
     clearTimeout(thanksSet);
-
   }
-
 
   if ($("#gallery_card_for_modal").length) {
     $("#gallery_card_for_modal .slider_item").map((index, item) => {
       $(item).on("click", function (e) {
-        var video = $('.gallery_modal_wrapper video');
+        var video = $(".gallery_modal_wrapper video");
         video.map((index, item) => {
           console.log(item);
           item.currentTime = 0;
           item.load();
-        })
+        });
         var slideIndex = $(item).attr("data-gallery-index");
-        $("#gallery_modal_img .project_img_slider").slick('slickGoTo', slideIndex);
+        $("#gallery_modal_img .project_img_slider").slick(
+          "slickGoTo",
+          slideIndex
+        );
         $("html").addClass("active_gallery_modal");
-      })
-    })
-
+      });
+    });
 
     $(".gallery_modal .close_modal").on("click", function () {
       $("html").removeClass("active_gallery_modal");
-      var video = $('.gallery_modal_wrapper video');
+      var video = $(".gallery_modal_wrapper video");
       video.map((index, item) => {
         console.log(item);
         // item.currentTime = 0;
         item.pause();
-      })
+      });
     });
   }
-
 
   if ($("#construction_card_for_modal").length) {
     $("#construction_card_for_modal .slider_item").map((index, item) => {
       $(item).on("click", function (e) {
-        var video = $('.gallery_modal_wrapper video');
+        var video = $(".gallery_modal_wrapper video");
         video.map((index, item) => {
           console.log(item);
           item.currentTime = 0;
           item.load();
-        })
+        });
         var slideIndex = $(item).attr("data-gallery-index");
-        $("#construction_modal_img .project_img_slider").slick('slickGoTo', slideIndex);
+        $("#construction_modal_img .project_img_slider").slick(
+          "slickGoTo",
+          slideIndex
+        );
         $("html").addClass("active_construction_modal");
-      })
-    })
-
+      });
+    });
 
     $(".gallery_modal .close_modal").on("click", function () {
       $("html").removeClass("active_construction_modal");
-      var video = $('.gallery_modal_wrapper video');
+      var video = $(".gallery_modal_wrapper video");
       video.map((index, item) => {
         console.log(item);
         // item.currentTime = 0;
         item.pause();
-      })
+      });
     });
   }
-
 
   if ($("#show_master_btn_link").length) {
     $("#show_master_btn_link").on("click", function (e) {
       $("html").addClass("active_master_plan_modal");
-    })
-
+    });
 
     $("#master_plan_modal_img .close_modal").on("click", function () {
       $("html").removeClass("active_master_plan_modal");
     });
   }
 
-
-
   AOS.init();
 });
 
 var splach = gsap.timeline({
   onComplete() {
-    $(".splashoverlay").css('display', 'none');
-  }
+    $(".splashoverlay").css("display", "none");
+  },
 });
-splach.to(".splashoverlay .overlay_logo", { y: 10, opacity: 0, esae: "back.out(1.7)", display: "none" })
-splach.to(".splashoverlay .splach_box", { bottom: "100%", stagger: .1, esae: "expo.out", display: "none" })
+splach.to(".splashoverlay .overlay_logo", {
+  y: 10,
+  opacity: 0,
+  esae: "back.out(1.7)",
+  display: "none",
+});
+splach.to(".splashoverlay .splach_box", {
+  bottom: "100%",
+  stagger: 0.1,
+  esae: "expo.out",
+  display: "none",
+});
 // .to(".splach_box_bottom", { bottom: "100%", esae: "expo.out" }, "<")
 splach.pause();
 function animateOut() {
   splach.play();
 }
-
 
 $(window).on("load", function () {
   var currentDir = $("body").css("direction");
