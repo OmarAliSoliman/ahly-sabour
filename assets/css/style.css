@@ -449,8 +449,9 @@ body.modal-open .mm-slideout {
   box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.07);
   padding: 140px 64px 180px 64px;
   position: relative;
-  background-color: #fbfbfb;
   overflow: hidden;
+  background-position: center;
+  background-size: cover;
 }
 .our_legacy .our_legacy_wrapper .our_legacy_img {
   position: absolute;
@@ -711,10 +712,12 @@ body.modal-open .mm-slideout {
 .avilible_projects {
   margin-bottom: 90px;
   overflow: hidden;
+  margin-top: 80px;
 }
 .avilible_projects .section_header {
   margin-bottom: 30px;
   font-family: helight;
+  text-align: left;
 }
 .avilible_projects .section_header h5 {
   font-size: 1.9rem;
@@ -981,6 +984,7 @@ body.modal-open .mm-slideout {
 
 .ceo_messages {
   margin-top: 80px;
+  overflow: hidden;
 }
 .ceo_messages .section_header {
   margin-bottom: 40px;
@@ -1429,6 +1433,7 @@ body.modal-open .mm-slideout {
 
 .our_portofilio {
   margin: 100px 0;
+  overflow: hidden;
 }
 .our_portofilio .section_header {
   margin-top: 0;
@@ -1518,6 +1523,7 @@ body.modal-open .mm-slideout {
 .our_developments_project_cards {
   margin-top: 115px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 .our_developments_project_cards .hr_line {
   margin-bottom: 50px;
@@ -2406,6 +2412,7 @@ body.modal-open .mm-slideout {
 .footer {
   background: #1b1b1b;
   padding: 65px 0 45px 0;
+  overflow: hidden;
 }
 .footer .footer_top_world {
   width: -moz-fit-content;
@@ -2600,10 +2607,13 @@ body.modal-open .mm-slideout {
   }
   .our_developments_project_card .sub_img {
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.2 !important;
     width: 100%;
     top: 0;
     z-index: -1;
+  }
+  .our_developments_project_card .card_content .content_width {
+    width: 100%;
   }
   .inner_page_header .inner_page_img .card_img {
     height: 400px;
@@ -2639,7 +2649,7 @@ body.modal-open .mm-slideout {
 @media (max-width: 600px) {
   .our_legacy .our_legacy_wrapper {
     padding: 20px;
-    padding-top: 50px;
+    padding-top: 160px;
     padding-bottom: 50px;
   }
   .our_legacy .our_legacy_wrapper .card_text {

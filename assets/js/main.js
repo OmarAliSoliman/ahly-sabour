@@ -112,13 +112,14 @@ $(document).ready(function () {
   //   });
   // }
 
+  var mySwiper1;
   if ($(".swiper_avilible_projects").length) {
     var $swiper = $(".swiper_avilible_projects");
     var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
     // into a fixed position for animation purposes
     var $bottomSlideContent = null; // Slide content that gets passed between the
 
-    var mySwiper = new Swiper(".swiper-container", {
+    mySwiper1 = new Swiper(".swiper_avilible_projects", {
       spaceBetween: 24,
       slidesPerView: 3.5,
       centeredSlides: true,
@@ -126,6 +127,8 @@ $(document).ready(function () {
       // freeMode: true,
       loop: true,
       loopAdditionalSlides: 30,
+      observer: true,
+      observeParents: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -145,6 +148,7 @@ $(document).ready(function () {
     });
   }
 
+  var mySwiper2;
   if ($(".swiperـbrains_slider").length) {
 
     var $swiper = $(".swiperـbrains_slider");
@@ -154,7 +158,7 @@ $(document).ready(function () {
     // panning slide stack and the position 'behind'
     // the stack, needed for correct animation style
 
-    var mySwiper = new Swiper(".swiper-container", {
+      mySwiper2 = new Swiper(".swiperـbrains_slider", {
       spaceBetween: 1,
       spaceBetween: 24,
       slidesPerView: 3,
@@ -339,6 +343,8 @@ $(document).ready(function () {
     $(".project_img_slider").slick("setPosition");
     $(".gallery_cards_slider").slick("setPosition");
     $(".construction_update_slider").slick("setPosition");
+    // console.log(mySwiper1.update())
+    mySwiper1.update()
     AOS.refresh();
   });
 
