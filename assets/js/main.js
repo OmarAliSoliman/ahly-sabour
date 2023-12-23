@@ -6,6 +6,8 @@ $(document).ready(function () {
     $(".nice_select").niceSelect();
   }
 
+  
+
   if ($(".projects_cards_slider").length) {
     var projects_cards_slider = $(".projects_cards_slider");
   
@@ -27,6 +29,7 @@ $(document).ready(function () {
       updateSliderItems();
     });
   
+
     projects_cards_slider.slick({
       slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
       slidesToScroll: 1,
@@ -41,19 +44,19 @@ $(document).ready(function () {
         {
           breakpoint: 1300,
           settings: {
-            slidesToShow: projects_cards_slider_items === 1 ? 1 : 1.1,
+            slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
           },
         },
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: projects_cards_slider_items === 1 ? 1 : 1.1,
+            slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
           },
         },
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: projects_cards_slider_items === 1 ? 1 : 1.1,
+            slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
             centerMode: false,
           },
         },
@@ -67,6 +70,9 @@ $(document).ready(function () {
       ],
     });
   }
+  
+  updateSliderItems();
+
 
   // if ($(".avilible_projects_cards_slider").length) {
   //   $(".avilible_projects_cards_slider").slick({
