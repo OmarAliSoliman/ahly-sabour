@@ -552,16 +552,18 @@ body.modal-open .mm-slideout {
     position: relative;
     // background-color: #fbfbfb;
     overflow: hidden;
-    background-position: center;
-    background-size: cover;
+    // background-position: center;
+    // background-size: cover;
     .our_legacy_img {
       position: absolute;
       top: 0;
       right: 0;
       z-index: 1;
-      width: 80%;
+      width: 100%;
+      height: 100%;
       img {
         margin-left: auto;
+        width: 100%;
       }
     }
 
