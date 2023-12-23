@@ -7,8 +7,28 @@ $(document).ready(function () {
   }
 
   if ($(".projects_cards_slider").length) {
-    $(".projects_cards_slider").slick({
-      slidesToShow: 1.5,
+    var projects_cards_slider = $(".projects_cards_slider");
+  
+    // Function to update slider items and refresh slider
+    function updateSliderItems() {
+      var activeTabId = $(".our_development_tabs .nav-item .nav-link.active").attr(
+        "data-bs-target"
+      );
+      var targetId = $(activeTabId + " .projects_cards_slider .slider_item").length;
+  
+      projects_cards_slider.slick("slickSetOption", {
+        slidesToShow: targetId === 1 ? 1 : 1.5,
+      });
+      projects_cards_slider.slick("refresh");
+      console.log(targetId);
+    }
+  
+    $(".our_development_tabs .nav-item .nav-link").on("shown.bs.tab", function () {
+      updateSliderItems();
+    });
+  
+    projects_cards_slider.slick({
+      slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
@@ -21,19 +41,19 @@ $(document).ready(function () {
         {
           breakpoint: 1300,
           settings: {
-            slidesToShow: 1.1,
+            slidesToShow: projects_cards_slider_items === 1 ? 1 : 1.1,
           },
         },
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: 1.1,
+            slidesToShow: projects_cards_slider_items === 1 ? 1 : 1.1,
           },
         },
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 1.1,
+            slidesToShow: projects_cards_slider_items === 1 ? 1 : 1.1,
             centerMode: false,
           },
         },
@@ -150,7 +170,6 @@ $(document).ready(function () {
 
   var mySwiper2;
   if ($(".swiperـbrains_slider").length) {
-
     var $swiper = $(".swiperـbrains_slider");
     var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
     // into a fixed position for animation purposes
@@ -158,7 +177,7 @@ $(document).ready(function () {
     // panning slide stack and the position 'behind'
     // the stack, needed for correct animation style
 
-      mySwiper2 = new Swiper(".swiperـbrains_slider", {
+    mySwiper2 = new Swiper(".swiperـbrains_slider", {
       spaceBetween: 1,
       spaceBetween: 24,
       slidesPerView: 3,
@@ -344,7 +363,7 @@ $(document).ready(function () {
     $(".gallery_cards_slider").slick("setPosition");
     $(".construction_update_slider").slick("setPosition");
     // console.log(mySwiper1.update())
-    mySwiper1.update()
+    // mySwiper1.update();
     AOS.refresh();
   });
 
