@@ -48,145 +48,183 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".avilible_projects_cards_slider").length) {
-    $(".avilible_projects_cards_slider").slick({
-      slidesToShow: 2.7,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: false,
-      speed: 300,
-      infinite: true,
-      loop: true,
-      autoplaySpeed: 5000,
-      centerMode: true,
-      autoplay: true,
-      responsive: [
-        {
-          breakpoint: 3400,
-          settings: {
-            slidesToShow: 3.7,
-          },
-        },
-        {
-          breakpoint: 2400,
-          settings: {
-            slidesToShow: 2.7,
-          },
-        },
-        {
-          breakpoint: 1800,
-          settings: {
-            slidesToShow: 2.7,
-          },
-        },
-        {
-          breakpoint: 1150,
-          settings: {
-            slidesToShow: 3.3,
-            // centerMode: false,
-          },
-        },
-        {
-          breakpoint: 1100,
-          settings: {
-            slidesToShow: 1.7,
-            // centerMode: false,
-          },
-        },
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 1.7,
-            // centerMode: false,
-          },
-        },
+  // if ($(".avilible_projects_cards_slider").length) {
+  //   $(".avilible_projects_cards_slider").slick({
+  //     slidesToShow: 2.7,
+  //     slidesToScroll: 1,
+  //     arrows: true,
+  //     dots: false,
+  //     speed: 300,
+  //     infinite: true,
+  //     loop: true,
+  //     autoplaySpeed: 5000,
+  //     centerMode: true,
+  //     autoplay: true,
+  //     responsive: [
+  //       {
+  //         breakpoint: 3400,
+  //         settings: {
+  //           slidesToShow: 3.7,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 2400,
+  //         settings: {
+  //           slidesToShow: 2.7,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 1800,
+  //         settings: {
+  //           slidesToShow: 2.7,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 1150,
+  //         settings: {
+  //           slidesToShow: 3.3,
+  //           // centerMode: false,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 1100,
+  //         settings: {
+  //           slidesToShow: 1.7,
+  //           // centerMode: false,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 991,
+  //         settings: {
+  //           slidesToShow: 1.7,
+  //           // centerMode: false,
+  //         },
+  //       },
 
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            // centerMode: false,
-          },
+  //       {
+  //         breakpoint: 600,
+  //         settings: {
+  //           slidesToShow: 1,
+  //           // centerMode: false,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // }
+
+  if ($(".swiper_avilible_projects").length) {
+    var $swiper = $(".swiper_avilible_projects");
+    var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
+    // into a fixed position for animation purposes
+    var $bottomSlideContent = null; // Slide content that gets passed between the
+
+    var mySwiper = new Swiper(".swiper-container", {
+      spaceBetween: 24,
+      slidesPerView: 3.5,
+      centeredSlides: true,
+      roundLengths: true,
+      // freeMode: true,
+      loop: true,
+      loopAdditionalSlides: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        // when window width is >= 600px
+        600: {
+          slidesPerView: 1.3,
+          spaceBetween: 20,
         },
-      ],
+        // when window width is >= 991px
+        991: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
     });
   }
 
-  var $swiper = $(".swiper_avilible_projects");
-  var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
-  // into a fixed position for animation purposes
-  var $bottomSlideContent = null; // Slide content that gets passed between the
-  // panning slide stack and the position 'behind'
-  // the stack, needed for correct animation style
+  if ($(".swiperـbrains_slider").length) {
 
-  var mySwiper = new Swiper(".swiper-container", {
-    spaceBetween: 24,
-    slidesPerView: 3.5,
-    centeredSlides: true,
-    roundLengths: true,
-    loop: true,
-    loopAdditionalSlides: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      // when window width is >= 600px
-      600: {
-        slidesPerView: 1.3,
-        spaceBetween: 20,
+    var $swiper = $(".swiperـbrains_slider");
+    var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
+    // into a fixed position for animation purposes
+    var $bottomSlideContent = null; // Slide content that gets passed between the
+    // panning slide stack and the position 'behind'
+    // the stack, needed for correct animation style
+
+    var mySwiper = new Swiper(".swiper-container", {
+      spaceBetween: 1,
+      spaceBetween: 24,
+      slidesPerView: 3,
+      centeredSlides: true,
+      roundLengths: true,
+      loop: true,
+      loopAdditionalSlides: 30,
+      autoplay: {
+        delay: 5000,
       },
-      // when window width is >= 991px
-      991: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+      breakpoints: {
+        // when window width is >= 600px
+        600: {
+          slidesPerView: 1.3,
+          spaceBetween: 20,
+        },
+        // when window width is >= 991px
+        991: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
       },
-    },
-  });
-
-  if ($(".brains_slider").length) {
-    $(".brains_slider").slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: true,
-      speed: 300,
-      infinite: true,
-      autoplaySpeed: 5000,
-      centerMode: true,
-      autoplay: true,
-      responsive: [
-        {
-          breakpoint: 1450,
-          settings: {
-            slidesToShow: 3,
-            // centerMode: false,
-          },
-        },
-        {
-          breakpoint: 1100,
-          settings: {
-            slidesToShow: 1.6,
-            // centerMode: false,
-          },
-        },
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 1.6,
-            // centerMode: false,
-          },
-        },
-
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            // centerMode: false,
-          },
-        },
-      ],
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
+
+    // $(".brains_slider").slick({
+    //   slidesToShow: 3,
+    //   slidesToScroll: 1,
+    //   arrows: true,
+    //   dots: true,
+    //   speed: 300,
+    //   infinite: true,
+    //   autoplaySpeed: 5000,
+    //   centerMode: true,
+    //   autoplay: true,
+    //   responsive: [
+    //     {
+    //       breakpoint: 1450,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         // centerMode: false,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 1100,
+    //       settings: {
+    //         slidesToShow: 1.6,
+    //         // centerMode: false,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 991,
+    //       settings: {
+    //         slidesToShow: 1.6,
+    //         // centerMode: false,
+    //       },
+    //     },
+
+    //     {
+    //       breakpoint: 600,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         // centerMode: false,
+    //       },
+    //     },
+    //   ],
+    // });
   }
 
   if ($(".gallery_cards_slider").length) {
