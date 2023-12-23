@@ -50,8 +50,8 @@ $(document).ready(function () {
 
   if ($(".avilible_projects_cards_slider").length) {
     $(".avilible_projects_cards_slider").slick({
-      slidesToShow: 5.8,
-      slidesToScroll: 1,
+      slidesToShow: 3.7,
+      slidesToScroll: 5,
       arrows: true,
       dots: false,
       speed: 300,
@@ -61,9 +61,15 @@ $(document).ready(function () {
       autoplay: true,
       responsive: [
         {
+          breakpoint: 3400,
+          settings: {
+            slidesToShow: 3.7,
+          },
+        },
+        {
           breakpoint: 2400,
           settings: {
-            slidesToShow: 4.6,
+            slidesToShow: 3.7,
           },
         },
         {
