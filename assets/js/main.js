@@ -6,32 +6,35 @@ $(document).ready(function () {
     $(".nice_select").niceSelect();
   }
 
-  
-
   if ($(".projects_cards_slider").length) {
     var projects_cards_slider = $(".projects_cards_slider");
-  
+
     // Function to update slider items and refresh slider
     function updateSliderItems() {
-      var activeTabId = $(".our_development_tabs .nav-item .nav-link.active").attr(
-        "data-bs-target"
-      );
-      var targetId = $(activeTabId + " .projects_cards_slider .slider_item").length;
-  
+      var activeTabId = $(
+        ".our_development_tabs .nav-item .nav-link.active"
+      ).attr("data-bs-target");
+      var targetId = $(
+        activeTabId + " .projects_cards_slider .slider_item"
+      ).length;
+
       projects_cards_slider.slick("slickSetOption", {
         slidesToShow: targetId === 1 ? 1 : 1.5,
       });
       projects_cards_slider.slick("refresh");
       console.log(targetId);
     }
-  
-    $(".our_development_tabs .nav-item .nav-link").on("shown.bs.tab", function () {
-      updateSliderItems();
-    });
-  
+
+    $(".our_development_tabs .nav-item .nav-link").on(
+      "shown.bs.tab",
+      function () {
+        updateSliderItems();
+      }
+    );
 
     projects_cards_slider.slick({
-      slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
+      slidesToShow:
+        projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
@@ -44,19 +47,22 @@ $(document).ready(function () {
         {
           breakpoint: 1300,
           settings: {
-            slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
+            slidesToShow:
+              projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
           },
         },
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
+            slidesToShow:
+              projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
           },
         },
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
+            slidesToShow:
+              projects_cards_slider.find(".slider_item").length === 1 ? 1 : 1.5,
             centerMode: false,
           },
         },
@@ -69,11 +75,15 @@ $(document).ready(function () {
         },
       ],
     });
+    updateSliderItems();
   }
-  
-  updateSliderItems();
 
-
+  if ($(".home_header_slider").length) {
+    $(".home_header_slider").slick({
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
+  }
   // if ($(".avilible_projects_cards_slider").length) {
   //   $(".avilible_projects_cards_slider").slick({
   //     slidesToShow: 2.7,
@@ -387,6 +397,45 @@ $(document).ready(function () {
     });
   }
 
+  function getsCurrentLiWidth() {
+    var liW = $(".ul_time_line li:first-child").css("min-width").split("px")[0];
+    return liW;
+  }
+
+  var scrollContentLi;
+  if ($(".time_line_vector").length) {
+    const scrollContainer = document.querySelector(".scroll-container");
+    const scrollContent = document.querySelector(".ul_time_line");
+    const scrollLeftButton = document.querySelector(".scroll-left");
+    const scrollRightButton = document.querySelector(".scroll-right");
+
+    scrollContentLi = getsCurrentLiWidth();
+    scrollContentLi = parseInt(scrollContentLi);
+    $(window).on("resize", function () {
+      scrollContentLi = getsCurrentLiWidth();
+      scrollContentLi = parseInt(scrollContentLi);
+    });
+
+    console.log(scrollContentLi);
+    // window
+
+    let scrollAmount = scrollContentLi; // Adjust the scroll distance as needed
+
+    scrollLeftButton.addEventListener("click", () => {
+      scrollContent.scrollTo({
+        left: scrollContent.scrollLeft - scrollAmount,
+        behavior: "smooth", // You can change to 'auto' for instant scrolling
+      });
+    });
+
+    scrollRightButton.addEventListener("click", () => {
+      scrollContent.scrollTo({
+        left: scrollContent.scrollLeft + scrollAmount,
+        behavior: "smooth", // You can change to 'auto' for instant scrolling
+      });
+    });
+  }
+
   if ($(".time_line_vector").length) {
     var timeLineAnimation = gsap.timeline();
     var timeLineList = $(".time_line_vector ul .single_time_line");
@@ -404,17 +453,25 @@ $(document).ready(function () {
       const lineLogoDot = $(item).find(".logo_line .line_dot");
       const lineLogo = $(item).find(".logo");
       timeLineAnimation
-        .from(lineThrow, { width: 0, stagger: 0.1, ease: "Power1.In.Out" })
+        .from(lineThrow, { width: 0, duration: 0.3, ease: "Power1.In.Out" })
         .from(
           lineCircle,
-          { scale: 0, stagger: 0.1, delay: 0.2, ease: "back.out(4.7)" },
+          { scale: 0, duration: 0.3, ease: "back.out(4.7)" },
           "<"
         )
-        .from(lineSubCircle, { scale: 0, stagger: 0.1, ease: "back.out(4.7)" })
-        .from(lineDate, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" })
-        .from(lineLogoDot, { scale: 0, stagger: 0.1, ease: "back.out(4.7)" })
-        .from(lineLogoLine, { height: 0, stagger: 0.1, ease: "Power1.In.Out" })
-        .from(lineLogo, { opacity: 0, stagger: 0.1, ease: "Power1.In.Out" });
+        .from(lineSubCircle, {
+          scale: 0,
+          duration: 0.3,
+          ease: "back.out(4.7)",
+        })
+        .from(lineDate, { opacity: 0, duration: 0.3, ease: "Power1.In.Out" })
+        .from(lineLogoDot, { scale: 0, duration: 0.3, ease: "back.out(4.7)" })
+        .from(lineLogoLine, {
+          height: 0,
+          duration: 0.3,
+          ease: "Power1.In.Out",
+        })
+        .from(lineLogo, { opacity: 0, duration: 0.3, ease: "Power1.In.Out" });
     }
 
     timeLineAnimation.from(".time_line_vector .reload_btn", {
