@@ -82,6 +82,7 @@ $(document).ready(function () {
     $(".home_header_slider").slick({
       autoplay: true,
       autoplaySpeed: 5000,
+      rtl: currentDir === "rtl" ? true : false,
     });
   }
   // if ($(".avilible_projects_cards_slider").length) {
