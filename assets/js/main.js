@@ -82,6 +82,7 @@ $(document).ready(function () {
     $(".home_header_slider").slick({
       autoplay: true,
       autoplaySpeed: 5000,
+      pauseOnHover:false,
       rtl: currentDir === "rtl" ? true : false,
     });
   }
@@ -158,7 +159,7 @@ $(document).ready(function () {
 
     mySwiper1 = new Swiper(".swiper_avilible_projects", {
       spaceBetween: 24,
-      slidesPerView: 3.5,
+      slidesPerView: 3,
       centeredSlides: true,
       roundLengths: true,
       // freeMode: true,
@@ -173,8 +174,8 @@ $(document).ready(function () {
       breakpoints: {
         // when window width is >= 600px
         600: {
-          slidesPerView: 1.3,
-          spaceBetween: 20,
+          slidesPerView: 1.1,
+          spaceBetween: 10,
         },
         // when window width is >= 991px
         991: {
@@ -424,14 +425,14 @@ $(document).ready(function () {
 
     scrollLeftButton.addEventListener("click", () => {
       scrollContent.scrollTo({
-        left: scrollContent.scrollLeft - scrollAmount,
+        left: currentDir === "rtl"? scrollContent.scrollLeft + scrollAmount:scrollContent.scrollLeft - scrollAmount,
         behavior: "smooth", // You can change to 'auto' for instant scrolling
       });
     });
 
     scrollRightButton.addEventListener("click", () => {
       scrollContent.scrollTo({
-        left: scrollContent.scrollLeft + scrollAmount,
+        left: currentDir === "rtl"? scrollContent.scrollLeft - scrollAmount:scrollContent.scrollLeft + scrollAmount,
         behavior: "smooth", // You can change to 'auto' for instant scrolling
       });
     });
@@ -610,14 +611,15 @@ var splach = gsap.timeline({
   },
 });
 splach.to(".splashoverlay .overlay_logo", {
-  y: 10,
+  // y: 10,
   opacity: 0,
   esae: "back.out(1.7)",
   display: "none",
 });
 splach.to(".splashoverlay .splach_box", {
-  bottom: "100%",
-  stagger: 0.1,
+  // bottom: "100%",
+  opacity: 0,
+  // stagger: 0.1,
   esae: "expo.out",
   display: "none",
 });
