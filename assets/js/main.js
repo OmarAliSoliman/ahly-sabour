@@ -218,10 +218,10 @@ $(document).ready(function () {
           spaceBetween: 20,
         },
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
     });
 
     // $(".brains_slider").slick({

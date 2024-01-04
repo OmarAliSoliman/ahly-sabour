@@ -239,6 +239,7 @@ body.modal-open .mm-slideout {
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-size: 1.1rem;
 }
 .custom_navbar .navbar_links .nav_item .nav_link i {
   font-size: 0.8rem;
@@ -443,7 +444,7 @@ body.modal-open .mm-slideout {
 
 .our_legacy .our_legacy_wrapper .card_title {
   color: #1b1b1b;
-  font-family: helight;
+  /* font-family: helight; */
   position: relative;
   z-index: 2;
   text-transform: uppercase;
@@ -454,7 +455,8 @@ body.modal-open .mm-slideout {
   text-transform: uppercase;
 }
 .our_legacy .our_legacy_wrapper .card_title span {
-  font-family: hemedium;
+  /* font-family: hemedium; */
+  font-weight: 500;
 }
 .our_legacy .our_legacy_wrapper .card_text {
   margin-bottom: 100px;
@@ -463,9 +465,11 @@ body.modal-open .mm-slideout {
 }
 .our_legacy .our_legacy_wrapper .card_text p {
   color: rgba(28, 28, 28, 0.8);
-  font-size: 1.1rem;
+  font-size: 22px;
   font-style: normal;
-  font-family: hemedium;
+  /* font-family: hemedium; */
+  line-height: 34.5px;
+  font-weight: 500;
   line-height: 34.5px;
 }
 .our_legacy .our_legacy_wrapper .card_link {
@@ -477,7 +481,8 @@ body.modal-open .mm-slideout {
   color: #2e55a4;
   font-size: 1.1rem;
   font-style: normal;
-  font-family: hemedium;
+  /* font-family: hemedium; */
+  font-weight: 500;
   line-height: 36px;
 }
 .our_legacy .our_legacy_wrapper .card_link a img {
@@ -530,6 +535,7 @@ body.modal-open .mm-slideout {
   font-size: 1.1rem;
   font-style: normal;
   line-height: 25px;
+  font-weight: 400;
 }
 .fact_number_card::after {
   content: "";
@@ -541,6 +547,9 @@ body.modal-open .mm-slideout {
   background-color: #f1f2f2;
   width: 2px;
   right: 0;
+}
+.fact_number_card.last_fact_number_card::after {
+  display: none;
 }
 
 .custom_fact_number_card .number {
@@ -646,7 +655,7 @@ body.modal-open .mm-slideout {
 .project_card {
   background: #f1f2f2;
   padding: 65px 40px 65px 0;
-  margin: 0 20px;
+  margin: 0 4px;
   direction: rtl;
 }
 .project_card .logo .logo_slug {
@@ -660,12 +669,12 @@ body.modal-open .mm-slideout {
   text-transform: capitalize;
 }
 .project_card .project_text {
-  margin-bottom: 75px;
+  margin-bottom: 110px;
   margin-top: 110px;
 }
 .project_card .project_text p {
   color: #1b1b1b;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-style: normal;
   line-height: 142.857%;
   letter-spacing: 0.63px;
@@ -676,6 +685,9 @@ body.modal-open .mm-slideout {
   padding: 20px 50px;
   color: #fff;
   font-size: 1rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .project_card .project_link a:hover {
   background-color: rgba(46, 85, 164, 0.8);
@@ -778,6 +790,8 @@ body.modal-open .mm-slideout {
   letter-spacing: 0.63px;
   text-transform: capitalize;
   -webkit-line-clamp: 4 !important;
+  font-weight: 500;
+  width: 80%;
 }
 .avilible_projects_card .card_body .card_link {
   position: relative;
@@ -816,11 +830,11 @@ body.modal-open .mm-slideout {
 }
 .swiper_avilible_projects .swiper-slide.swiper-slide-active {
   opacity: 1;
-  transform: translateY(-50px);
+  transform: translateY(-80px);
 }
 
 .swiper_avilible_projects .swiper-slide.swiper-slide-active .card_img {
-  height: 600px;
+  height: 630px;
 }
 
 .swiper_avilible_projects .swiper-slide.swiper-slide-prev {
@@ -940,12 +954,14 @@ body.modal-open .mm-slideout {
 }
 
 .custom_breadcrumb {
-  height: calc(60vh - 120px);
-  margin-top: 120px;
+  height: 397px;
+  display: flex;
+  /* margin-top: 120px; */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-bottom: 75px;
 }
 .custom_breadcrumb .path {
   margin-bottom: 25px;
@@ -1047,7 +1063,8 @@ body.modal-open .mm-slideout {
   margin-top: 75px;
 }
 .time_line_wraper .section_header h5 {
-  font-family: hemedium;
+  /* font-family: hemedium; */
+  font-weight: 500;
   text-transform: uppercase;
 }
 .time_line_wraper .scroll-container {
@@ -1652,8 +1669,8 @@ body.modal-open .mm-slideout {
   background-color: #2e55a4;
 }
 .our_developments_project_card .dev_pro_btn a:hover {
-  background-color: #fff;
-  color: #1b1b1b;
+  background-color: #1b1b1b;
+  color: #fff;
 }
 .our_developments_project_card .card_content .logo {
   margin-bottom: 45px;
@@ -2614,6 +2631,11 @@ body.modal-open .mm-slideout {
 }
 
 /* ================================================================ */
+@media (max-width: 1800px) {
+  html {
+    font-size: 15px;
+  }
+}
 @media (max-width: 1500px) {
   .custom_navbar .navbar_links .nav_item {
     margin-right: 35px;
