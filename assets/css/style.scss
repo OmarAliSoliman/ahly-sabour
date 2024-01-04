@@ -1114,6 +1114,9 @@ body.modal-open .mm-slideout {
 }
 
 @media (max-width: 600px) {
+  html{
+    font-size: 14px;
+  }
   .swiper_avilible_projects {
     .swiper-slide {
       .card_img {
@@ -1146,6 +1149,9 @@ body.modal-open .mm-slideout {
   .swiper-container-rtl .swiper-button-next {
     right: unset;
     left: 30px;
+  }
+  .our_development .section_header h5 span, .our_development .section_header h5{
+    font-size: 1.8rem;
   }
 }
 
@@ -3331,7 +3337,7 @@ body.modal-open .mm-slideout {
 
   .home_header,
   .custom_breadcrumb {
-    margin-top: 112px;
+    // margin-top: 112px;
   }
 
   .page_under_construction {
@@ -3392,6 +3398,7 @@ body.modal-open .mm-slideout {
     width: 100%;
     top: 0;
     z-index: -1;
+    display: none;
   }
   .our_developments_project_card .card_content .content_width {
     width: 100%;
@@ -3433,6 +3440,12 @@ body.modal-open .mm-slideout {
       }
     }
   }
+}
+.desktopimg{
+  display: block;
+}
+.mobilevew{
+  display: none;
 }
 
 @media (max-width: 600px) {
@@ -3707,7 +3720,18 @@ body.modal-open .mm-slideout {
       display: none;
     }
   }
+  .desktopimg{
+    display: none !important;
+  }
+  .mobilevew{
+    display: block !important;
+  }
+  .time_line_vector .reload_btn{
+    margin-top: 0;
+  }
 }
+
+
 
 @media (max-width: 400px) {
   .time_line_vector .single_time_line {

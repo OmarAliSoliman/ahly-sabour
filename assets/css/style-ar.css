@@ -2630,6 +2630,13 @@ body.modal-open .mm-slideout {
   display: none !important;
 }
 
+.desktopimg{
+  display: block;
+}
+.mobilevew{
+  display: none;
+}
+
 /* ================================================================ */
 @media (max-width: 1800px) {
   html {
@@ -2678,7 +2685,7 @@ body.modal-open .mm-slideout {
   }
   .home_header,
   .custom_breadcrumb {
-    margin-top: 112px;
+    /* margin-top: 112px; */
   }
   .page_under_construction .page_under_construction_wrap {
     margin-top: 112px;
@@ -2724,6 +2731,7 @@ body.modal-open .mm-slideout {
     width: 100%;
     top: 0;
     z-index: -1;
+    display: none;
   }
   .inner_page_header .inner_page_img .card_img {
     height: 400px;
@@ -2742,6 +2750,7 @@ body.modal-open .mm-slideout {
   }
 }
 
+.mobilevew{display: none;}
 @media (max-width: 750px) {
   .our_portofilio .section_header h5 {
     margin-left: 0 !important;
@@ -2758,6 +2767,12 @@ body.modal-open .mm-slideout {
   }
   .our_portofilio .download_btn a {
     margin: auto !important;
+  }
+  .desktopimg{
+    display: none !important;
+  }
+  .mobilevew{
+    display: block !important;
   }
 }
 
@@ -2962,6 +2977,12 @@ body.modal-open .mm-slideout {
   }
   .floating_btn .request_tooltip {
     display: none;
+  }
+  .our_development .section_header h5 span, .our_development .section_header h5{
+    font-size: 1.8rem;
+  }
+  html{
+    font-size: 14px;
   }
 }
 
