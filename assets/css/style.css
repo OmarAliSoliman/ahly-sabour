@@ -938,7 +938,8 @@ body.modal-open .mm-slideout {
     right: unset;
     left: 30px;
   }
-  .our_development .section_header h5 span, .our_development .section_header h5 {
+  .our_development .section_header h5 span,
+  .our_development .section_header h5 {
     font-size: 1.8rem;
   }
 }
@@ -1122,7 +1123,6 @@ body.modal-open .mm-slideout {
 .time_line_vector ul {
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 100px 0;
   margin: auto;
 }
 .time_line_vector .single_time_line {
@@ -2625,6 +2625,105 @@ body.modal-open .mm-slideout {
 
 .last_links::after {
   display: none !important;
+}
+
+.time_line {
+  margin-bottom: 120px;
+}
+.time_line .slider-for .slide_content {
+  padding: 50px 0;
+}
+.time_line .slider-nav .year_card {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.time_line .slider-nav .year_card .buttet {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.time_line .slider-nav .year_card .buttet .small_bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.time_line .slider-nav .year_card span {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  display: block;
+}
+.time_line .slider-nav .year_card .line_between {
+  position: absolute;
+  top: 20%;
+  transform: translate(0, -50%);
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  z-index: -1;
+}
+.time_line .slider-nav .year_card .line_between .line_between_color {
+  background-color: #0039b5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.time_line .slider-nav .slick-current .year_card .buttet {
+  border: 1px solid #2e55a4;
+  width: 20px;
+  height: 20px;
+}
+.time_line .slider-nav .slick-current .year_card .small_bullet {
+  background-color: #2e55a4;
+  width: 10px;
+  height: 10px;
+}
+.time_line .slider-nav .slick-prev.slick-disabled:before, .time_line .slider-nav .slick-next.slick-disabled:before {
+  opacity: 0.4;
+  z-index: -1;
+}
+.time_line .slider-nav .slick-arrow {
+  top: 10%;
+  transform: translate(0, -50%);
+  z-index: 5;
+}
+.time_line .slider-nav .slick-arrow::before {
+  content: "";
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.time_line .slider-nav .slick-next {
+  right: 0;
+}
+.time_line .slider-nav .slick-next::before {
+  background-image: url("../images/arrowright.svg");
+  z-index: 5;
+}
+.time_line .slider-nav .slick-prev {
+  z-index: 9;
+  left: 0;
+  z-index: 2;
+}
+.time_line .slider-nav .slick-prev::before {
+  background-image: url("../images/aroowtimeline2.svg");
+  z-index: 5;
 }
 
 /* ================================================================ */

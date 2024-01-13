@@ -18,12 +18,12 @@ $(document).ready(function () {
         activeTabId + " .projects_cards_slider .slider_item"
       ).length;
 
-      if($(window).width() <= 991){
+      if ($(window).width() <= 991) {
         projects_cards_slider.slick("slickSetOption", {
           slidesToShow: targetId === 1 ? 1 : 1,
         });
         projects_cards_slider.slick("refresh");
-      }else{
+      } else {
         projects_cards_slider.slick("slickSetOption", {
           slidesToShow: targetId === 1 ? 1 : 1.5,
         });
@@ -68,7 +68,7 @@ $(document).ready(function () {
         {
           breakpoint: 991,
           settings: {
-            slidesToShow:1,
+            slidesToShow: 1,
             centerMode: false,
           },
         },
@@ -88,7 +88,7 @@ $(document).ready(function () {
     $(".home_header_slider").slick({
       autoplay: true,
       autoplaySpeed: 5000,
-      pauseOnHover:false,
+      pauseOnHover: false,
       rtl: currentDir === "rtl" ? true : false,
     });
   }
@@ -405,44 +405,44 @@ $(document).ready(function () {
     });
   }
 
-  function getsCurrentLiWidth() {
-    var liW = $(".ul_time_line li:first-child").css("min-width").split("px")[0];
-    return liW;
-  }
+  // function getsCurrentLiWidth() {
+  //   var liW = $(".ul_time_line li:first-child").css("min-width").split("px")[0];
+  //   return liW;
+  // }
 
-  var scrollContentLi;
-  if ($(".time_line_vector").length) {
-    const scrollContainer = document.querySelector(".scroll-container");
-    const scrollContent = document.querySelector(".ul_time_line");
-    const scrollLeftButton = document.querySelector(".scroll-left");
-    const scrollRightButton = document.querySelector(".scroll-right");
+  // var scrollContentLi;
+  // if ($(".time_line_vector").length) {
+  //   const scrollContainer = document.querySelector(".scroll-container");
+  //   const scrollContent = document.querySelector(".ul_time_line");
+  //   const scrollLeftButton = document.querySelector(".scroll-left");
+  //   const scrollRightButton = document.querySelector(".scroll-right");
 
-    scrollContentLi = getsCurrentLiWidth();
-    scrollContentLi = parseInt(scrollContentLi);
-    $(window).on("resize", function () {
-      scrollContentLi = getsCurrentLiWidth();
-      scrollContentLi = parseInt(scrollContentLi);
-    });
+  //   scrollContentLi = getsCurrentLiWidth();
+  //   scrollContentLi = parseInt(scrollContentLi);
+  //   $(window).on("resize", function () {
+  //     scrollContentLi = getsCurrentLiWidth();
+  //     scrollContentLi = parseInt(scrollContentLi);
+  //   });
 
-    console.log(scrollContentLi);
-    // window
+  //   console.log(scrollContentLi);
+  //   // window
 
-    let scrollAmount = scrollContentLi; // Adjust the scroll distance as needed
+  //   let scrollAmount = scrollContentLi; // Adjust the scroll distance as needed
 
-    scrollLeftButton.addEventListener("click", () => {
-      scrollContent.scrollTo({
-        left: currentDir === "rtl"? scrollContent.scrollLeft + scrollAmount:scrollContent.scrollLeft - scrollAmount,
-        behavior: "smooth", // You can change to 'auto' for instant scrolling
-      });
-    });
+  //   scrollLeftButton.addEventListener("click", () => {
+  //     scrollContent.scrollTo({
+  //       left: currentDir === "rtl"? scrollContent.scrollLeft + scrollAmount:scrollContent.scrollLeft - scrollAmount,
+  //       behavior: "smooth", // You can change to 'auto' for instant scrolling
+  //     });
+  //   });
 
-    scrollRightButton.addEventListener("click", () => {
-      scrollContent.scrollTo({
-        left: currentDir === "rtl"? scrollContent.scrollLeft - scrollAmount:scrollContent.scrollLeft + scrollAmount,
-        behavior: "smooth", // You can change to 'auto' for instant scrolling
-      });
-    });
-  }
+  //   scrollRightButton.addEventListener("click", () => {
+  //     scrollContent.scrollTo({
+  //       left: currentDir === "rtl"? scrollContent.scrollLeft - scrollAmount:scrollContent.scrollLeft + scrollAmount,
+  //       behavior: "smooth", // You can change to 'auto' for instant scrolling
+  //     });
+  //   });
+  // }
 
   if ($(".time_line_vector").length) {
     var timeLineAnimation = gsap.timeline();
@@ -606,6 +606,94 @@ $(document).ready(function () {
     $("#master_plan_modal_img .close_modal").on("click", function () {
       $("html").removeClass("active_master_plan_modal");
     });
+  }
+
+  if ($(".time_line").length) {
+    $(".slider-for").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      infinite: false,
+      asNavFor: ".slider-nav",
+      swipe: false, // Disable swiping
+      draggable: false, // Disable dragging,
+      // rtl: currentDir == "rtl" ? true: false,
+    });
+    $(".slider-nav").slick({
+      slidesToShow: 9,
+      slidesToScroll: 1,
+      asNavFor: ".slider-for",
+      dots: false,
+      arrows: true,
+      infinite: false,
+      focusOnSelect: true,
+      // rtl: currentDir == "rtl" ? true: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+
+    $(".slider-nav").on(
+      "beforeChange",
+      function (event, slick, currentSlide, nextSlide) {
+        // Set the width of line_between_color based on the direction of the change
+        if (nextSlide > currentSlide) {
+          console.log($(".year_card").eq(currentSlide).nextAll());
+          // Forward direction
+          $(".year_card")
+            .eq(currentSlide)
+            .find(".line_between_color")
+            .width("100%");
+          $(".year_card")
+            .eq(currentSlide)
+            .prevAll()
+            .find(".line_between_color")
+            .width("100%");
+          $(".year_card")
+            .eq(currentSlide)
+            .nextAll()
+            .find(".line_between_color")
+            .width("0%");
+        } else {
+          // Backward direction
+          $(".year_card")
+            .eq(currentSlide)
+            .find(".line_between_color")
+            .width("0%");
+          $(".year_card")
+            .eq(currentSlide)
+            .prevAll()
+            .find(".line_between_color")
+            .width("0%");
+          $(".year_card")
+            .eq(currentSlide)
+            .nextAll()
+            .find(".line_between_color")
+            .width("100%");
+        }
+      }
+    );
   }
 
   AOS.init();

@@ -330,7 +330,7 @@ body.modal-open .mm-slideout {
         align-items: center;
         cursor: pointer;
         font-size: 1.1rem;
-        
+
         i {
           font-size: 0.8rem;
           margin-left: 7px;
@@ -1114,7 +1114,7 @@ body.modal-open .mm-slideout {
 }
 
 @media (max-width: 600px) {
-  html{
+  html {
     font-size: 14px;
   }
   .swiper_avilible_projects {
@@ -1150,7 +1150,8 @@ body.modal-open .mm-slideout {
     right: unset;
     left: 30px;
   }
-  .our_development .section_header h5 span, .our_development .section_header h5{
+  .our_development .section_header h5 span,
+  .our_development .section_header h5 {
     font-size: 1.8rem;
   }
 }
@@ -1381,7 +1382,7 @@ body.modal-open .mm-slideout {
   ul {
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 100px 0;
+    // padding: 100px 0;
     // width: 90%;
     margin: auto;
   }
@@ -2498,7 +2499,7 @@ body.modal-open .mm-slideout {
       font-family: $helight;
       text-transform: capitalize;
       margin-top: 32px;
-      font-family: 'Syne', sans-serif;
+      font-family: "Syne", sans-serif;
       font-weight: 400;
       line-height: 28px; /* 155.556% */
     }
@@ -2718,7 +2719,7 @@ body.modal-open .mm-slideout {
         line-height: 137.5%;
         margin-bottom: 40px;
         font-weight: 500;
-        font-family: 'Syne', sans-serif;
+        font-family: "Syne", sans-serif;
       }
 
       a {
@@ -3275,6 +3276,124 @@ body.modal-open .mm-slideout {
   }
 }
 
+.time_line {
+  margin-bottom: 120px;
+  .slider-for {
+    .slide_content {
+      padding: 50px 0;
+    }
+  }
+  .slider-nav {
+    .year_card {
+      text-align: center;
+      cursor: pointer;
+      // border: 1px solid #000;
+      // width: fit-content;
+      position: relative;
+      .buttet {
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border: 2px solid #eee;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // opacity: 0.5;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+        // transition: all 0.3s ease-in-out;
+        .small_bullet {
+          width: 8px;
+          height: 8px;
+          background-color: #eee;
+          border-radius: 50%;
+          // opacity: ;
+          // transition: all 0.3s ease-in-out;
+        }
+      }
+      span {
+        font-size: 0.9rem;
+        margin-top: 10px;
+        display: block;
+      }
+      .line_between {
+        position: absolute;
+        top: 20%;
+        transform: translate(0, -50%);
+        left: 50%;
+        width: 100%;
+        height: 1px;
+        background-color: #eee;
+        z-index: -1;
+        .line_between_color{
+          background-color: #0039b5;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          transition: all .3s ease-in-out;
+          // z-index: 2;
+        }
+      }
+    }
+    .slick-current {
+      .year_card {
+        .buttet {
+          border:1px solid #2e55a4;
+          width: 20px;
+          height: 20px;
+        }
+        .small_bullet {
+          background-color: #2e55a4;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{
+      opacity: .4;
+      z-index: -1;
+    }
+    .slick-arrow {
+      // background-color: red;
+      top: 10%;
+      transform: translate(0, -50%);
+      z-index: 5;
+      &::before {
+        content: "";
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        display: block;
+      }
+    }
+
+    .slick-next {
+      right: 0;
+      &::before {
+        background-image: url("../images/arrowright.svg");
+        z-index: 5;
+      }
+    }
+
+    .slick-prev {
+      // right: 40px;
+      z-index: 9;
+      left: 0;
+      z-index: 2;
+      &::before {
+        background-image: url("../images/aroowtimeline2.svg");
+        z-index: 5;
+      }
+    }
+  }
+}
+
 /* ================================================================ */
 
 @media (max-width: 1800px) {
@@ -3441,10 +3560,10 @@ body.modal-open .mm-slideout {
     }
   }
 }
-.desktopimg{
+.desktopimg {
   display: block;
 }
-.mobilevew{
+.mobilevew {
   display: none;
 }
 
@@ -3720,18 +3839,16 @@ body.modal-open .mm-slideout {
       display: none;
     }
   }
-  .desktopimg{
+  .desktopimg {
     display: none !important;
   }
-  .mobilevew{
+  .mobilevew {
     display: block !important;
   }
-  .time_line_vector .reload_btn{
+  .time_line_vector .reload_btn {
     margin-top: 0;
   }
 }
-
-
 
 @media (max-width: 400px) {
   .time_line_vector .single_time_line {
