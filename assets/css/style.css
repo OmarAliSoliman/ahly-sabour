@@ -2630,8 +2630,37 @@ body.modal-open .mm-slideout {
 .time_line {
   margin-bottom: 120px;
 }
+.time_line .slider-for::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  height: 15px;
+  left: 94px;
+  background-color: rgba(0, 57, 181, 0.7607843137);
+  border-radius: 50%;
+  width: 15px;
+}
+.time_line .slider-for::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 80%;
+  left: 100px;
+  background-color: rgba(0, 57, 181, 0.7607843137);
+  border-radius: 5px;
+  width: 3px;
+}
 .time_line .slider-for .slide_content {
-  padding: 50px 0;
+  padding: 100px 0;
+  border-radius: 5px;
+  padding-left: 100px;
+}
+.time_line .slider-for .slide_content .sliCont {
+  padding-left: 100px;
+}
+.time_line .slider-for .slide_content .sliCont h5 {
+  width: 50%;
 }
 .time_line .slider-nav .year_card {
   text-align: center;
@@ -2681,6 +2710,19 @@ body.modal-open .mm-slideout {
   height: 100%;
   transition: all 0.3s ease-in-out;
 }
+.time_line .slider-nav .slide_year:first-child {
+  position: relative;
+}
+.time_line .slider-nav .slide_year:first-child::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #eee;
+  z-index: -1;
+}
 .time_line .slider-nav .slick-current .year_card .buttet {
   border: 1px solid #2e55a4;
   width: 20px;
@@ -2691,7 +2733,8 @@ body.modal-open .mm-slideout {
   width: 10px;
   height: 10px;
 }
-.time_line .slider-nav .slick-prev.slick-disabled:before, .time_line .slider-nav .slick-next.slick-disabled:before {
+.time_line .slider-nav .slick-prev.slick-disabled:before,
+.time_line .slider-nav .slick-next.slick-disabled:before {
   opacity: 0.4;
   z-index: -1;
 }
@@ -2832,6 +2875,9 @@ body.modal-open .mm-slideout {
   }
   .home_header .card_img {
     height: 50vh;
+  }
+  .time_line .slider-for .slide_content .sliCont h5 {
+    width: 100%;
   }
 }
 @media (max-width: 750px) {
@@ -3062,6 +3108,12 @@ body.modal-open .mm-slideout {
   }
   .time_line_vector .reload_btn {
     margin-top: 0;
+  }
+  .time_line .slider-for .slide_content, .time_line .slider-for .slide_content .sliCont {
+    padding-left: 0;
+  }
+  .time_line .slider-for::after, .time_line .slider-for::before {
+    display: none;
   }
 }
 @media (max-width: 400px) {

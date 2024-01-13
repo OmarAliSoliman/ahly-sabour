@@ -621,7 +621,7 @@ $(document).ready(function () {
       // rtl: currentDir == "rtl" ? true: false,
     });
     $(".slider-nav").slick({
-      slidesToShow: 9,
+      slidesToShow: 7,
       slidesToScroll: 1,
       asNavFor: ".slider-for",
       dots: false,
@@ -661,36 +661,11 @@ $(document).ready(function () {
         if (nextSlide > currentSlide) {
           console.log($(".year_card").eq(currentSlide).nextAll());
           // Forward direction
-          $(".year_card")
-            .eq(currentSlide)
-            .find(".line_between_color")
-            .width("100%");
-          $(".year_card")
-            .eq(currentSlide)
-            .prevAll()
-            .find(".line_between_color")
-            .width("100%");
-          $(".year_card")
-            .eq(currentSlide)
-            .nextAll()
-            .find(".line_between_color")
-            .width("0%");
+          console.log(currentSlide)
+          $(".year_card").eq(currentSlide).find(".line_between_color").width("100%");
         } else {
           // Backward direction
-          $(".year_card")
-            .eq(currentSlide)
-            .find(".line_between_color")
-            .width("0%");
-          $(".year_card")
-            .eq(currentSlide)
-            .prevAll()
-            .find(".line_between_color")
-            .width("0%");
-          $(".year_card")
-            .eq(currentSlide)
-            .nextAll()
-            .find(".line_between_color")
-            .width("100%");
+          $(".year_card").eq(currentSlide).find(".line_between_color").width("0%");
         }
       }
     );

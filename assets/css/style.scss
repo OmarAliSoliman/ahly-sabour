@@ -1171,6 +1171,7 @@ body.modal-open .mm-slideout {
       }
     }
   }
+
 }
 
 .custom_breadcrumb {
@@ -3279,8 +3280,40 @@ body.modal-open .mm-slideout {
 .time_line {
   margin-bottom: 120px;
   .slider-for {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      // transform: translate(0, -50%);
+      height: 15px;
+      left: 94px;
+      background-color: #0039b5c2;
+      border-radius: 50%;
+      width: 15px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      height: 80%;
+      left: 100px;
+      background-color: #0039b5c2;
+      border-radius: 5px;
+      width: 3px;
+    }
     .slide_content {
-      padding: 50px 0;
+      padding: 100px 0;
+      // border: 1px solid #000;
+      border-radius: 5px;
+      padding-left: 100px;
+      .sliCont {
+        // border: 1px solid #000;
+        padding-left: 100px;
+        h5{
+          width: 50%;
+        }
+      }
     }
   }
   .slider-nav {
@@ -3327,22 +3360,38 @@ body.modal-open .mm-slideout {
         height: 1px;
         background-color: #eee;
         z-index: -1;
-        .line_between_color{
+        .line_between_color {
           background-color: #0039b5;
           position: absolute;
           top: 0;
           left: 0;
           width: 0;
           height: 100%;
-          transition: all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           // z-index: 2;
         }
       }
     }
+
+    .slide_year:first-child {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20%;
+        // transform: translate(0, -50%);
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background-color: #eee;
+        z-index: -1;
+      }
+    }
+
     .slick-current {
       .year_card {
         .buttet {
-          border:1px solid #2e55a4;
+          border: 1px solid #2e55a4;
           width: 20px;
           height: 20px;
         }
@@ -3353,8 +3402,9 @@ body.modal-open .mm-slideout {
         }
       }
     }
-    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{
-      opacity: .4;
+    .slick-prev.slick-disabled:before,
+    .slick-next.slick-disabled:before {
+      opacity: 0.4;
       z-index: -1;
     }
     .slick-arrow {
@@ -3537,6 +3587,9 @@ body.modal-open .mm-slideout {
 
   .home_header .card_img {
     height: 50vh;
+  }
+  .time_line .slider-for .slide_content .sliCont h5{
+    width: 100%;
   }
 }
 
@@ -3847,6 +3900,12 @@ body.modal-open .mm-slideout {
   }
   .time_line_vector .reload_btn {
     margin-top: 0;
+  }
+  .time_line .slider-for .slide_content, .time_line .slider-for .slide_content .sliCont{
+    padding-left: 0;
+  }
+  .time_line .slider-for::after, .time_line .slider-for::before{
+    display: none;
   }
 }
 
