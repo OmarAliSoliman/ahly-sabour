@@ -627,7 +627,7 @@ $(document).ready(function () {
       dots: false,
       arrows: true,
       infinite: false,
-      focusOnSelect: true,
+      focusOnSelect: false,
       // rtl: currentDir == "rtl" ? true: false,
       responsive: [
         {
