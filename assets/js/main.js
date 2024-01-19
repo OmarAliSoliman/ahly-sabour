@@ -224,10 +224,7 @@ $(document).ready(function () {
           spaceBetween: 20,
         },
       },
-      // navigation: {
-      //   nextEl: ".swiper-button-next",
-      //   prevEl: ".swiper-button-prev",
-      // },
+   
     });
 
     // $(".brains_slider").slick({
@@ -369,6 +366,7 @@ $(document).ready(function () {
     $(".project_img_slider").slick({
       dots: true,
       arrows: true,
+      infinite: false,
       rtl: currentDir === "rtl" ? true : false,
       responsive: [
         {
@@ -545,15 +543,23 @@ $(document).ready(function () {
       $(item).on("click", function (e) {
         var video = $(".gallery_modal_wrapper video");
         video.map((index, item) => {
-          console.log(item);
           item.currentTime = 0;
           item.load();
+          item.pause();
         });
         var slideIndex = $(item).attr("data-gallery-index");
+        
         $("#gallery_modal_img .project_img_slider").slick(
           "slickGoTo",
           slideIndex
         );
+        var targetInd = $(`#gallery_modal_img .project_img_slider .slider-item`)[slideIndex];
+        var targetVid = $(targetInd).find("video");
+        // $(targetVid).play();
+        if (targetVid.length > 0) {
+          var videoToPlay = targetVid.get(0);
+          videoToPlay.play();
+        }
         $("html").addClass("active_gallery_modal");
       });
     });
@@ -562,7 +568,6 @@ $(document).ready(function () {
       $("html").removeClass("active_gallery_modal");
       var video = $(".gallery_modal_wrapper video");
       video.map((index, item) => {
-        console.log(item);
         // item.currentTime = 0;
         item.pause();
       });
@@ -591,7 +596,6 @@ $(document).ready(function () {
       $("html").removeClass("active_construction_modal");
       var video = $(".gallery_modal_wrapper video");
       video.map((index, item) => {
-        console.log(item);
         // item.currentTime = 0;
         item.pause();
       });
@@ -628,6 +632,7 @@ $(document).ready(function () {
       arrows: true,
       infinite: false,
       focusOnSelect: false,
+      centerMode: true,
       // rtl: currentDir == "rtl" ? true: false,
       responsive: [
         {
