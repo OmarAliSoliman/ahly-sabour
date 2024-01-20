@@ -582,12 +582,21 @@ $(document).ready(function () {
           console.log(item);
           item.currentTime = 0;
           item.load();
+          item.pause();
+
         });
         var slideIndex = $(item).attr("data-gallery-index");
         $("#construction_modal_img .project_img_slider").slick(
           "slickGoTo",
           slideIndex
         );
+        var targetInd = $(`#construction_modal_img .project_img_slider .slider-item`)[slideIndex];
+        var targetVid = $(targetInd).find("video");
+        // $(targetVid).play();
+        if (targetVid.length > 0) {
+          var videoToPlay = targetVid.get(0);
+          videoToPlay.play();
+        }
         $("html").addClass("active_construction_modal");
       });
     });
